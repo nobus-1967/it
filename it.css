@@ -60,6 +60,10 @@ kbd {
     font-family: "Courier New", Courier, mono;
 }
 
+.read {
+    font-weight: bold;
+}
+
 .copyright {
     font-size: large;
     font-weight: bold;
