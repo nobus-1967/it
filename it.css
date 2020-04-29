@@ -60,7 +60,8 @@ kbd {
     font-family: "Courier New", Courier, mono;
 }
 
-.read {
+.read,
+.back {
     font-weight: bold;
 }
 

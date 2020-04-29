@@ -29,6 +29,11 @@ nav {
     padding: 1em 0.5em 0.5em 2em;
 }
 
+.itpage {
+    padding: 0 2em 0.5 2em;
+    text-align: right;
+}
+
 h2 {
     border-top-style: dashed;
     color: #e6db74;
