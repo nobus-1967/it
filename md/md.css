@@ -1,6 +1,6 @@
-/* Style: Monokai */
+/* Style: Blue&Yellow */
 body {
-    background-color: #272822;
+    background-color: #0085ff;
     color: #f8f8f2;
     font-family: Georgia,
         "Times New Roman",
@@ -21,7 +21,7 @@ footer {
 }
 
 h1 {
-    color: #e69f66;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -36,7 +36,7 @@ nav {
 
 h2 {
     border-top-style: dashed;
-    color: #e6db74;
+    color: #c2f936;
     padding: 1em 0 0.5em 0;
 }
 
@@ -61,24 +61,25 @@ img {
 
 a:link,
 a:visited {
-    color: #66d9ef;
+    color: #fcff00;
     text-decoration: underline;
 }
 
 a:active,
 a:hover,
 a:focus {
-    color: #f92672;
+    color: #abf300;
     text-decoration: underline;
 }
 
 kbd {
-    color: #a6e22e;
+    color: #1d4591;
     font-family: "Courier New", Courier, mono;
 }
 
+
 address {
-    color: #776644;
+    color: #e5eff5;
     font-size: large;
     font-weight: bold;
     text-align: center;
