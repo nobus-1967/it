@@ -6,7 +6,6 @@ body {
         "Times New Roman",
         serif;
     font-size: medium;
-    font-weight: bold;
     line-height: 1.2em;
     margin: 0;
     padding: 2em 1em 1em;
@@ -45,10 +44,9 @@ ul {
 }
 
 .navlinks {
+    color: #66d9ef;
     font-size: large;
-    font-weight: bold;
     line-height: 1.5em;
-    list-style-type: circle;
 }
 
 figure {
@@ -62,6 +60,7 @@ img {
 a:link,
 a:visited {
     color: #66d9ef;
+    font-weight: bold;
     text-decoration: underline;
 }
 
@@ -69,12 +68,19 @@ a:active,
 a:hover,
 a:focus {
     color: #f92672;
+    font-weight: bold;
     text-decoration: underline;
 }
 
 kbd {
     color: #a6e22e;
     font-family: "Courier New", Courier, mono;
+    font-weight: bold;
+}
+
+.back {
+    font-size: large;
+    font-weight: bold;
 }
 
 address {

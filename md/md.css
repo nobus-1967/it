@@ -1,12 +1,11 @@
-/* Style: Blue&Yellow */
+/* Style: Narkdown Blue */
 body {
-    background-color: #0085ff;
+    background-color: #0084ff;
     color: #f8f8f2;
     font-family: Georgia,
         "Times New Roman",
         serif;
     font-size: medium;
-    font-weight: bold;
     line-height: 1.2em;
     margin: 0;
     padding: 2em 1em 1em;
@@ -36,7 +35,7 @@ nav {
 
 h2 {
     border-top-style: dashed;
-    color: #c2f936;
+    color: #abda00;
     padding: 1em 0 0.5em 0;
 }
 
@@ -45,10 +44,9 @@ ul {
 }
 
 .navlinks {
+    color: #ffc300;
     font-size: large;
-    font-weight: bold;
     line-height: 1.5em;
-    list-style-type: circle;
 }
 
 figure {
@@ -61,22 +59,29 @@ img {
 
 a:link,
 a:visited {
-    color: #fcff00;
+    color: #ffc300;
+    font-weight: bold;
     text-decoration: underline;
 }
 
 a:active,
 a:hover,
 a:focus {
-    color: #abf300;
+    color: #74ee15;
+    font-weight: bold;
     text-decoration: underline;
 }
 
 kbd {
-    color: #1d4591;
+    color: #303cbe;
     font-family: "Courier New", Courier, mono;
+    font-weight: bold;
 }
 
+.back {
+    font-size: large;
+    font-weight: bold;
+}
 
 address {
     color: #e5eff5;
