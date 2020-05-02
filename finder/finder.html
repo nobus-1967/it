@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Файловые менеджеры для macOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description" content="Рекомендации по выбору двухпанельного файлового менеджера для macOS">
+    <meta name="keywords" content="Файловый менеджер, менеджер файлов, mscOS, Finder, Midnight Commander, Commander One, ForkLift, Анатолий Щербина">
+    <link rel="stylesheet" href="finder.css">
+</head>
+
+<body>
+    <header id="beginning">
+        <h1>Файловые менеджеры для macOS</h1>
+    </header>
+    <nav>
+        <p class="itpage"><a href="../index.html" title="К списку заметок компьютерной тематики">&Gt;&nbsp;За компьютером</a></p>
+        <figure><img src="img/finder_icon.png" alt="Finder" height="256" width="256"></figure>
+        <ul class="navlinks">
+            <li><a href="#part01">Finder</a></li>
+            <li><a href="#part02">Midnight Commander</a></li>
+            <li>
+                <a href="#part03">Commander One</a>
+            </li>
+            <li>
+                <a href="#part04">ForkLift</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 id="part01">Finder</h2>
+            <figure><img src="img/finder.png" alt="Файловый менеджер Finder" height="600" width="850"></figure>
+            <p>Стандартный файловый менеджер <em>macOS</em> &mdash; <strong>Finder</strong> &mdash; может многое, в том числе работать с архивами <kbd>.zip</kbd>, устанавливать сетевые соединения и отображать скрытые файлы командой <kbd>Shift-Cmd-.</kbd> и т.д. Для удобство работы с разными папками модно открыть несколько вкладок. Однако тем, кто привык к двухпанельным файловым менеджерам наподобие <em>FAR</em> или <em>Total Commander</em> для <em>MS Windows</em>, интерфейс <em>Finder</em>'а покажется не слишком удобным. Поэтому я предложу вам несколько программ, способных дополнить <em>Finder</em> или заменить его.</p>
+            <p>В качестве дополнительно условия при выборе программ мною определено, что они должны иметь русскоязычный интерфейс.</p>
+        </section>
+        <section>
+            <h2 id="part02">Midnight Commander</h2>
+            <figure><img src="img/mc.png" alt="Консольный Midnight Commander" height="585" width="1000"></figure>
+            <p>Да, знакомый пользователям <em>*nix</em>-систем консольный файловый менеджер <strong>Midnight Commander</strong>, он же <kbd>mc</kbd>, тоже можно использовать в терминале <em>macOS</em>. Для его установки достаточно воспользоваться недостающим менеджером пакетов <a href="https://brew.sh/index_ru" title="Установка Homebrew" target="_blank">Homebrew</a> и ввести простую команду: <kbd>brew install mc</kbd>. И вот еще: запомните <a href="https://gist.github.com/sgergely/3793166" title="Сочетания клавиш Midnight Commander для macOS" target="_blank">сочетания клавиш для macOS</a>! </p>
+            <p><em>mc</em> &mdash; программа, которой я пользуюсь достаточно часто. Но, если вы не дружны с консолью, посмотрите в сторону <abbr title="Графический интерфейс пользователя">GUI</abbr>-программ.</p>
+        </section>
+        <section>
+            <h2 id="part03">Commander One</h2>
+            <figure><img src="img/commander_one.png" alt="Файловый менеджер Commsnder One" height="585" width="1000"></figure>
+            <p><abbr title="Графический интерфейс пользователя">GUI</abbr>-программа, несомненно, вдохновлена знаменитым <em>Total Commander</em>’ом. Установить и использовать <a href="https://mac.eltima.com/file-manager.html" title="Страница программы Commander One" target="_blank">Commander One</a> в базовой версии можно бесплатно; однако продвинутые его функции, такие, как работа с архивами, закачка файлов по протоколу <em>FTP</em> или подключение облачных хранилищ вроде <em>Google Drive</em>, доступны только в платной версии <strong>PRO</strong>.</p>
+            <p><em>Commander One</em> написан на разработанном <em>Apple</em> языке программирования <em>Swift</em> и отлично работает с файловой системой <em>macOS</em>. Несмотря на то, что для <em>PRO</em>-версии необходимо приобретать лицензию, я счёл бы его одним из лучших кандидатов для окончательного выбора в этой категории программ, но…</p>
+        </section>
+        <section>
+            <h2 id="part04">ForkLift</h2>
+            <figure><img src="img/forklift.png" alt="Файловый менеджер ForkLift" height="585" width="1000"></figure>
+            <p>Есть ещё файловый менеджер <a href="https://binarynights.com/" title="Сайт программы ForkLift" target="_blank">ForkLift</a>! Программа с графическим интерфейсом, правда, платная (за всё хорошее надо платить), пользователь может оценить пробную версию перед покупкой. <em>ForkLift</em> имеет все тех же функции, что и <em>Commander One PRO</em>, а также целый ряд дополнительных полезных опций, в том числе встроенный просмотр файлов, групповое переименование файлов, сравнение файлов и каталогов, их синхронизацию и поддержку <em>Git</em>. И ещё: нужную папку можно быстро открыть в терминале &mdash; опция, которой мне так не хватало в классическом <em>Finder</em>’е.</p>
+            <p>Для меня именно данная программа &mdash; почти идеальный вариант того, каким должен быть двухпанельный файловый менеджер.</p>
+        </section>
+    </main>
+    <footer>
+        <p class="back"><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К началу страницы</a></p>
+        <address>&copy;&nbsp;<a href="http://avshcherbina.ru/" title="Сайт Анатолия Щербины">Анатолий
+                Щербина</a>, 02.05.2020</address>
+    </footer>
+</body>
+
+</html>

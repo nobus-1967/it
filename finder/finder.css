@@ -1,0 +1,91 @@
+/* Style: Apple Development */
+body {
+    background-color: #e9e8e6;
+    color: #000000;
+    font-family: Georgia,
+        "Times New Roman",
+        serif;
+    font-size: medium;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 2em 1em 1em;
+    text-align: left;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 0 0.5em 0 2em;
+}
+
+h1 {
+    color: #263238;
+    text-align: center;
+}
+
+nav {
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
+}
+
+h2 {
+    border-top-style: dashed;
+    color: #4c4c4c;
+    padding: 1em 0 0.5em 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.navlinks {
+    color: #1478f6;
+    font-size: large;
+    line-height: 1.5em;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    color: #1478f6;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover,
+a:focus {
+    color: #ff3630;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+kbd {
+    color: #5856d6;
+    font-family: "Courier New", Courier, mono;
+    font-weight: bold;
+}
+
+.back {
+    font-size: large;
+    font-weight: bold;
+}
+
+address {
+    color: #8e8e93;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
