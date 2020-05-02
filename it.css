@@ -23,6 +23,10 @@ h1 {
     text-align: center;
 }
 
+nav {
+    padding: 0 0.5em 0 2em;
+}
+
 h2 {
     border-top-style: dashed;
     color: #343961;
@@ -33,6 +37,9 @@ ul {
     list-style-type: disc;
 }
 
+.menu {
+    color: #343961;
+}
 
 figure {
     text-align: center;
@@ -42,17 +49,24 @@ img {
     padding: 0;
 }
 
+a {
+    text-decoration: underline;
+}
+
 a:link,
 a:visited {
     color: #343961;
-    text-decoration: underline;
 }
 
 a:active,
 a:hover,
 a:focus {
     color: #747474;
-    text-decoration: underline;
+}
+
+.menulink {
+    color: #343961;
+    font-weight: bold;
 }
 
 kbd {
