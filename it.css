@@ -58,6 +58,7 @@ a:focus {
 kbd {
     color: #272727;
     font-family: "Courier New", Courier, mono;
+    font-weight: bold;
 }
 
 .read,
