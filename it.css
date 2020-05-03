@@ -81,7 +81,7 @@ code {
     font-weight: bold;
 }
 
-address {
+.copyright, address {
     font-size: large;
     font-weight: bold;
     text-align: center;
