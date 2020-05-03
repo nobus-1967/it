@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Генерация Loren Ipsum для Веб-дизайнеров</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description" content="Способы генерации Loren Ipsum для Веб-дизайнеров">
+    <meta name="keywords" content="Веб-дизайн, macOS, Lorem Ipsum, getlorem, LoremBuilder, Visual Studio Code, Emmet, Анатолий Щербина">
+    <link rel="stylesheet" href="lorem.css">
+</head>
+
+<body>
+    <header id="beginning">
+        <h1>Генерация Loren Ipsum для Веб-дизайнеров</h1>
+    </header>
+    <nav>
+        <p class="itpage"><a href="../index.html" title="К списку заметок компьютерной тематики">&Gt;&nbsp;За компьютером</a></p>
+        <figure><img src="img/lorem.png" alt="Текст Lorem Ipsum" height="250" width="530"></figure>
+        <ul class="navlinks">
+            <li><a href="#part01">Lorem Ipsum</a></li>
+            <li><a href="#part02">Онлайновые генераторы текста</a></li>
+            <li>
+                <a href="#part03">Консольные утилиты</a>
+            </li>
+            <li>
+                <a href="#part04">Десктопные приложения</a>
+            </li>
+            <li>
+                <a href="#part05">Подключаемые модули</a>
+            </li>
+            <li>
+                <a href="#part06">Emmet</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 id="part01">Lorem Ipsum</h2>
+            <figure><img src="img/use_lorem.png" alt="Веб-страница с текстом Lorem Ipsum" height="600" width="1000"></figure>
+            <p>При создании макета Веб-сайта часто необходима &quot;рыба&quot; &mdash; текст, который потом будет заменён контентом. В качестве такой рыбы издавна выступает известный псевдо-латинский текст <a href="https://en.wikipedia.org/wiki/Lorem_ipsum" title="Lorem Ipsum (статья Википедии)" target="_blank">Lorem Ipsum</a> &mdash; искаженный фрагмент трактата Марка Туллия Цицерона <em>&quot;De finibus bonorum et malorum&quot;</em>.</p>
+            <p>В это заметке я остановлюсь на том, какими способами можно сгенерировать подобный псевдо-текст.</p>
+        </section>
+        <section>
+            <h2 id="part02">Онлайновые генераторы текста</h2>
+            <figure><img src="img/lipsum.png" alt="Онлайн-генератор текста Lorem Ipsum" height="600" width="1000"></figure>
+            <p>Самый доступный вариант &mdash; использовать какой-либо онлайновый генератор псевдотекст, например, <a href="https://ru.lipsum.com/" title="Мультиязычный онлайн-генератор Lorem Iopsum" target="_blank">https://ru.lipsum.com</a>, который удобен своим многоязычным интерфейсом. Здесь можно выбрать, что мы будем генерировать (отдельные слова, параграфы или списки) и размеры генерируемого текста. Останется лишь скопировать текст с Веб-страницы и вставить в свою разметку.</p>
+            <p>Но существуют и более удобные способы сделать подобную работу оффлайн.</p>
+        </section>
+        <section>
+            <h2 id="part03">Консольные утилиты</h2>
+            <figure><img src="img/getlorem.png" alt="Запуск getlorem в консоли" height="600" width="890"></figure>
+            <p>Терминал &mdash; универсальное орудие, в нём можно сделать многое, в том числе и получить &quot;рыбу&quot; для нашей странички. Для этого требуется установить подходящую утилиту, например,  <a href="https://www.npmjs.com/package/getlorem" title="Пакет getlorem" target="_blank">getlorem</a>. Это можно сделать при помощи менеджера пакетов <kbd>npm</kbd> для <em>Node.js</em>. Посмотреть, как работает эта утилита, можно на странице <a href="https://getlorem.com/" title="Lorem Ipsum &mdash; Generator, History and Meaning" target="_blank">Lorem Ipsum &mdash; Generator, History and Meaning</a>.</p>
+            <p>Если вы предпочитаете графический интерфейс, тогда к вашим услугам еще несколько способов генерации псевдо-контента.</p>
+        </section>
+        <section>
+            <h2 id="part04">Десктопные приложения</h2>
+            <figure><img src="img/lorembuilder.png" alt="Программа LoremBuider" height="600" width="700"></figure>
+            <p>Можно установить на свой компьютер <abbr title="Графический интерфейс пользователя">GUI</abbr>-приложение, например, в <em>macOS</em> такой программой является <a href="http://www.lorembuilder.com" title="LoremBuilder &mdash; Uенератор псевдо-текста для macOS">LoremBuilder</a>, который можно использовать бесплатно. Эта небольшая программка генерирует слова или параграфы и копирует их в буфер обмена, осталось лишь вставить текст в создаваемую страничку. Использовать данное приложение просто, но большой гибкости от него не ждите. К тому же &quot;оборачивать&quot; вставляемый текст тегами вам придется вручную.</p>
+        </section>
+        <section>
+            <h2 id="part05">Подключаемые модули</h2>
+            <figure><img src="img/lorem_pugin.png" alt="Модуль для Visual Studio Code" height="600" width="1000"></figure>
+            <p>Для многих редакторов кода есть подключаемые модули, которые позволяют сделать подобную операцию генерации и вставки псевдо-текст не выходя из приложения. Например, соответствующие модули есть и для популярного кроссплатформенного редактора <em>Visual Studio Code</em> &mdash; их очень просто найти в <a href="https://marketplace.visualstudio.com/" title="Каталог расширений для Visual Studio Code" target="_blank">каталоге расширений Marketplace</a>.</p>
+            <p>Конечно, удобно делать всю такую работу в одном рабочем инструменте, но от ручной работы по &quot;оборачиванию&quot; текста и здесь не обойтись.</p>
+        </section>
+        <section>
+            <h2 id="part06">Emmet</h2>
+            <figure><img src="img/emmet.png" alt="Emmet в Visual Studio Code" height="600" width="1000"></figure>
+            <p>Почему бы Веб-дизайнеру сразу не сделать работу по размещению &quot;рыбы&quot; внутри создаваемой разметки? Здесь нам на помощь приходит такой модуль, как <a href="https://emmet.io/" title="Сайт Emmet">Emmet</a>, который также доступен в большинстве редакторов кода, включая упомянутый <em>Visual Studio Code</em>.</p>
+            <p>Например, нужно поместить 5 слов в тег <kbd>h1</kbd>. Набираем <kbd>h1&gt;lorem5</kbd> и после нажатия клавиши <kbd>Tab</kbd> получаем:</p>
+            <code>
+                &lt;h1&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;
+            </code>
+            <p>Если надо создать 5 параграфов с псевдо-текстом, достаточно набрать команду <kbd>p*5&gt;lorem</kbd>.</p>
+            <p><em>Emmet</em> &mdash; очень гибкий инструмент, у него много возможностей, за счет которых работа Веб-дизайнера сильно облегчается. Посмотреть на то, как выглядят его команды, можно <a href="https://docs.emmet.io/cheat-sheet/" title="Комманды Emmet" target="_blank">здесь</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p class="back"><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К началу страницы</a></p>
+        <address>&copy;&nbsp;<a href="http://avshcherbina.ru/" title="Сайт Анатолия Щербины">Анатолий
+                Щербина</a>, 03.05.2020</address>
+    </footer>
+</body>
+
+</html>

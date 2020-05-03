@@ -1,7 +1,7 @@
-/* Style: Cat in the City */
+/* Style: Crayons */
 body {
-    background-color: #d0c9c6;
-    color: #090b15;
+    background-color: #fffff2;
+    color: #383b3d;
     font-family: Georgia,
         "Times New Roman",
         serif;
@@ -13,23 +13,28 @@ body {
 }
 
 header,
-article,
+main,
 footer {
     padding: 0 0.5em 0 2em;
 }
 
 h1 {
-    color: #1c2039;
+    color: #532a93;
     text-align: center;
 }
 
 nav {
-    padding: 0 0.5em 0 2em;
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
 }
 
 h2 {
     border-top-style: dashed;
-    color: #343961;
+    color: #941751;
     padding: 1em 0 0.5em 0;
 }
 
@@ -37,8 +42,10 @@ ul {
     list-style-type: disc;
 }
 
-.menu {
-    color: #343961;
+.navlinks {
+    color: #941100;
+    font-size: large;
+    line-height: 1.5em;
 }
 
 figure {
@@ -49,39 +56,35 @@ img {
     padding: 0;
 }
 
-a {
-    text-decoration: underline;
-}
-
 a:link,
 a:visited {
-    color: #343961;
+    color: #941100;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 a:active,
 a:hover,
 a:focus {
-    color: #747474;
-}
-
-.menulink {
-    color: #343961;
+    color: #ec4391;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 kbd,
 code {
-    color: #272727;
+    color: #974df7;
     font-family: "Courier New", Courier, mono;
     font-weight: bold;
 }
 
-.read,
 .back {
+    font-size: large;
     font-weight: bold;
 }
 
 address {
+    color: #952551;
     font-size: large;
     font-weight: bold;
     text-align: center;

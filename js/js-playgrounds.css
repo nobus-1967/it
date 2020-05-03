@@ -71,7 +71,8 @@ a:focus {
     text-decoration: underline;
 }
 
-kbd {
+kbd,
+code {
     color: #a6e22e;
     font-family: "Courier New", Courier, mono;
     font-weight: bold;
