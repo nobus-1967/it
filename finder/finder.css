@@ -20,6 +20,7 @@ footer {
 
 h1 {
     color: #263238;
+    line-height: 1.5em;
     text-align: center;
 }
 
@@ -35,6 +36,7 @@ nav {
 h2 {
     border-top-style: dashed;
     color: #4c4c4c;
+    line-height: 1.3em;
     padding: 1em 0 0.5em 0;
 }
 

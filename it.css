@@ -20,6 +20,7 @@ footer {
 
 h1 {
     color: #1c2039;
+    line-height: 1.5em;
     text-align: center;
 }
 
@@ -30,6 +31,7 @@ nav {
 h2 {
     border-top-style: dashed;
     color: #343961;
+    line-height: 1.3em;
     padding: 1em 0 0.5em 0;
 }
 
@@ -81,7 +83,8 @@ code {
     font-weight: bold;
 }
 
-.copyright, address {
+.copyright,
+address {
     font-size: large;
     font-weight: bold;
     text-align: center;
