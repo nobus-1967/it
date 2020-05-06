@@ -9,7 +9,7 @@
     <meta name="description" content="Заметки на компьютерную тематику (операционные сисетмы Linux и macOSБ Веб-дизайн, программирование)">
     <meta name="keywords" content="Linux, macOS, операционные системы, Веб-дизайн, HTML5, CCS3, JavaScript, Node.js, программирование, Анатолий Щербина">
     <meta name="yandex-verification" content="0b22228f70b68c5d">
-    <link rel="stylesheet" href="it.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,12 +23,21 @@
     </article>
     <nav>
         <ul class="menu">
-            <li><a href="#lorem" title="Файловые менеджеры для macOS" class="menulink">Генерация Lorem Ipsum для Веб-дизайнеров</a></li>
+            <li><a href="#pwd" title="Пример генерации паролей средствами  JavaScript" class="menulink">Пример генерации паролей средствами  JavaScript</a></li>
+            <li><a href="#lorem" title="Генерация Lorem Ipsum для Веб-дизайнеров" class="menulink">Генерация Lorem Ipsum для Веб-дизайнеров</a></li>
             <li><a href="#finder" title="Файловые менеджеры для macOS" class="menulink">Файловые менеджеры для macOS</a></li>
             <li><a href="#md" title="Markdown-редакторы" class="menulink">Markdown-редакторы</a></li>
             <li><a href="#js" title="Выбор песочницы для изучения JavaScript" class="menulink">Выбор песочницы для изучения JavaScript</a></li>
         </ul>
     </nav>
+    <article id="pwd">
+        <h2>Пример генерации паролей средствами  JavaScript</h2>
+        <figure><img src="pwd/img/generator.png" alt="Работа генератора паролей" height="600" width="1000"></figure>
+        <p>Генерация псевдослучайных последовательностей символов, в том числе паролей, &mdash; стандартная задача, которая достаточно просто реализуется средствами <em>JavaScript</em>. Для этого не нужны никакие дополнительные программы. Пользователь может сгенерировать отвечающий определенным критериям пароль (длина пароля, допустимый набор символов и их сочетание) прямо в браузере и тут же использовать его на соответсвующем Веб-сервере.</p>
+        <p>О том, почему применяемый метод генерирует не случайные, а псевдослучайные последовательности, и рассказывается в данной заметке.</p>
+        <p><a href="pwd/pwd.html" title="Пример генерации паролей средствами  JavaScript" class="read">&Gt;&nbsp;Читать заметку</a></p>
+        <p class="back"><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К началу страницы</a></p>
+    </article>
     <article id="lorem">
         <h2>Генерация Lorem Ipsum для Веб-дизайнеров</h2>
         <figure><img src="lorem/img/getlorem.png" alt="Запуск getlorem в консоли" height="600" width="890"></figure>

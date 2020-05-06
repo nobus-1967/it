@@ -1,7 +1,7 @@
-/* Style: Crayons */
+/* Style: Cat in the City */
 body {
-    background-color: #fffff2;
-    color: #383b3d;
+    background-color: #d0c9c6;
+    color: #090b15;
     font-family: Georgia,
         "Times New Roman",
         serif;
@@ -13,29 +13,24 @@ body {
 }
 
 header,
-main,
+article,
 footer {
     padding: 0 0.5em 0 2em;
 }
 
 h1 {
-    color: #532a93;
+    color: #1c2039;
     line-height: 1.5em;
     text-align: center;
 }
 
 nav {
-    padding: 1em 0.5em 0.5em 2em;
-}
-
-.itpage {
-    padding: 0 2em 0.5em 2em;
-    text-align: right;
+    padding: 0 0.5em 0 2em;
 }
 
 h2 {
     border-top-style: dashed;
-    color: #941751;
+    color: #343961;
     line-height: 1.3em;
     padding: 1em 0 0.5em 0;
 }
@@ -44,10 +39,8 @@ ul {
     list-style-type: disc;
 }
 
-.navlinks {
-    color: #941100;
-    font-size: large;
-    line-height: 1.5em;
+.menu {
+    color: #343961;
 }
 
 figure {
@@ -58,35 +51,40 @@ img {
     padding: 0;
 }
 
+a {
+    text-decoration: underline;
+}
+
 a:link,
 a:visited {
-    color: #941100;
-    font-weight: bold;
-    text-decoration: underline;
+    color: #343961;
 }
 
 a:active,
 a:hover,
 a:focus {
-    color: #ec4391;
+    color: #747474;
+}
+
+.menulink {
+    color: #343961;
     font-weight: bold;
-    text-decoration: underline;
 }
 
 kbd,
 code {
-    color: #974df7;
+    color: #272727;
     font-family: "Courier New", Courier, mono;
     font-weight: bold;
 }
 
+.read,
 .back {
-    font-size: large;
     font-weight: bold;
 }
 
+.copyright,
 address {
-    color: #952551;
     font-size: large;
     font-weight: bold;
     text-align: center;

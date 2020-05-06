@@ -1,36 +1,41 @@
-/* Style: Cat in the City */
+/* Style: Base16 */
 body {
-    background-color: #d0c9c6;
-    color: #090b15;
+    background-color: #f5f5f5;
+    color: #202020;
     font-family: Georgia,
         "Times New Roman",
         serif;
     font-size: medium;
     line-height: 1.2em;
     margin: 0;
-    padding: 2em 1em 1em;
+    padding: 2em 1em 1em 1em;
     text-align: left;
 }
 
 header,
-article,
+main,
 footer {
     padding: 0 0.5em 0 2em;
 }
 
 h1 {
-    color: #1c2039;
+    color: #151515;
     line-height: 1.5em;
     text-align: center;
 }
 
 nav {
-    padding: 0 0.5em 0 2em;
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
 }
 
 h2 {
     border-top-style: dashed;
-    color: #343961;
+    color: #6a9fb5;
     line-height: 1.3em;
     padding: 1em 0 0.5em 0;
 }
@@ -39,8 +44,10 @@ ul {
     list-style-type: disc;
 }
 
-.menu {
-    color: #343961;
+.navlinks {
+    color: #ac4142;
+    font-size: large;
+    line-height: 1.5em;
 }
 
 figure {
@@ -51,40 +58,41 @@ img {
     padding: 0;
 }
 
-a {
-    text-decoration: underline;
-}
-
 a:link,
 a:visited {
-    color: #343961;
+    color: #ac4142;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 a:active,
 a:hover,
 a:focus {
-    color: #747474;
-}
-
-.menulink {
-    color: #343961;
+    color: #aa759f;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 kbd,
-code {
-    color: #272727;
+code,
+var {
+    color: #8f5536;
     font-family: "Courier New", Courier, mono;
     font-weight: bold;
 }
 
-.read,
+.jscode {
+    background-color: #e0e0e0;
+    padding: 1em 1em 1em 3em;
+}
+
 .back {
+    font-size: large;
     font-weight: bold;
 }
 
-.copyright,
 address {
+    color: #8f5536;
     font-size: large;
     font-weight: bold;
     text-align: center;
