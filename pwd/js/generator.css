@@ -41,7 +41,7 @@ ul {
     font-family: Georgia,
         "Times New Roman",
         serif;
-    font-size: smaller;
+    font-size: medium;
     padding: 0.5em;
     text-decoration: none;
 }
@@ -49,6 +49,7 @@ ul {
 .button:hover {
     background-color: #ac4142;
     color: #f5f5f5;
+
 }
 
 .pwdpage {
