@@ -58,6 +58,8 @@ a {
 a:link,
 a:visited {
     color: #343961;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 a:active,
@@ -68,18 +70,12 @@ a:focus {
 
 .menulink {
     color: #343961;
-    font-weight: bold;
 }
 
 kbd,
 code {
     color: #272727;
     font-family: "Courier New", Courier, mono;
-    font-weight: bold;
-}
-
-.read,
-.back {
     font-weight: bold;
 }
 
