@@ -69,8 +69,6 @@ a:active,
 a:hover,
 a:focus {
     color: #74ee15;
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 kbd,
