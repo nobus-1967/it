@@ -5,15 +5,15 @@ const LETTERS = ABC + NUMBERS;
 const SYMBOLS = ABC + NUMBERS + SIGNS;
 let password = "";
 
-function getPassword(ABC, LETTERS, SYMBOLS) {
-    password += ABC[Math.floor(Math.random() * ABC.length)];
+function getPassword(FIRST, SECOND, THIRD) {
+    password += FIRST[Math.floor(Math.random() * FIRST.length)];
     for (let i = 0; i < 6; ++i) {
-        password += SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
+        password += SECOND[Math.floor(Math.random() * SECOND.length)];
     }
-    password += LETTERS[Math.floor(Math.random() * LETTERS.length)];
+    password += THIRD[Math.floor(Math.random() * THIRD.length)];
     return password;
 }
-getPassword(ABC, LETTERS, SYMBOLS);
+getPassword(ABC, SYMBOLS, LETTERS);
 
 function alertPassword() {
     alert("Password: " + password);
