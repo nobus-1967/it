@@ -66,7 +66,8 @@
                     password += FIRST[Math.floor(Math.random() * FIRST.length)];<br>
                     for (let i = 0; i &lt; 6; ++i) {<br> password += SECONS[Math.floor(Math.random() * SECOND.length)];<br>
                     }<br>
-                    password += THIRD[Math.floor(Math.random() * THIRD.length)]; return password;<br>
+                    password += THIRD[Math.floor(Math.random() * THIRD.length)];<br>
+                    return password;<br>
                     }</code>
             </p>
             <p>Теперь можно вызвать функцию, передав ей в качестве аргументов имена последовательностей (в нужном порядке): <code>getPassword(ABC, SYMBOLS, LETTERS);</code>.</p>
