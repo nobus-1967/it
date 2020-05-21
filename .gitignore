@@ -15,3 +15,9 @@ webstorm/.DS_Store
 webstorm/img/.DS_Store
 .idea/codeStyles/codeStyleConfig.xml.idea/dictionaries/nobus.xml.idea/.gitignore.idea/it.iml.idea/misc.xml.idea/modules.xml.idea/vcs.xml.idea/workspace.xml
 .DS_Store
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/it.iml
+.idea/dictionaries/nobus.xml
+.idea/codeStyles/codeStyleConfig.xml
