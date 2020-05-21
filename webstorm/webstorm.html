@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Как я перестал беспокоиться и полюбил JetBrains</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description"
+          content="Рекомендации по выбору редактора для Веб-дизайна (HTML, CSS, JavaScript)">
+    <meta name="keywords"
+          content="HTML, CSS, JavaScript, Python, Brackets, JetBrains, WebStorm, PyCharm, IntelliJ IDEA, Веб-дизайн, программирование, Анатолий Щербина">
+    <link rel="stylesheet" href="webstorm.css">
+</head>
+
+<body>
+<header id="beginning">
+    <h1>Как я перестал беспокоиться и полюбил JetBrains</h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img src="img/webstorm-logo.png" alt="Логотип Python" height="256"
+                 width="256"></figure>
+    <ul class="navlinks">
+        <li><a href="#part01">На этом месте могла быть реклама...</a></li>
+        <li><a href="#part02">Brackets и не только</a></li>
+        <li><a href="#part03">Наконец-то время WebStorm</a></li>
+        <li><a href="#part04">Для начинающих JavaScript-программистов</a></li>
+        <li><a href="#part05">Бонус: встречайте PyCharm</a></li>
+        <li><a href="#part06">И ещё один приятный бонус</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">На этом месте могла быть реклама...</h2>
+        <figure><img src="img/jetbrains.png" alt="Сайт JetBrains"
+                     height="585"
+                     width="1000">
+        </figure>
+        <p>...но её не будет! Данная заметка ни в коей мере не является рекламой
+            продуктов компании  <a href="https://www.jetbrains.com/"
+                                   title="Сайт компании JetBrains"
+                                   target="_blank">JetBrains</a> или
+            чем-то вроде <em>product placement</em>. Никакого профита от данной
+            софтверной компании автор не получил, поверьте.</p>
+        <p>Я только поделюсь с вами своим мнением по поводу <a
+                href="https://www.jetbrains.com/webstorm/"
+                title="Страница редактора Webstorm"
+                target="_blank">WebStorm</a> &mdash; инструмента для
+            Веб-разработчиков, и объясню, почему в итоге этот программный
+            продукт подошёл мне лучше всего.</p>
+        <p>Кстати, бонусом расскажу об инструменте, который пригодится и
+            изучающим <em>Python</em>, и начинающим <em>Python</em>-
+            разработчикам (и также имеет отношение к <em>JetBrains</em>).</p>
+    </section>
+    <section>
+        <h2 id="part02">Brackets и не только</h2>
+        <figure><img src="img/brackets.png" alt="Веб-редактор Brackets"
+                     height="600" width="1000">
+        </figure>
+        <p>Я пытался найти программу, способную заменить старый добрый
+            кроссплатформенный Веб-редактор <a href="http://brackets.io/"
+                                               title="Сайт редактора Brackets"
+                                               target="_blank">Braсkets</a>, но
+            до недавнего времени не сильно преуспел.</p>
+        <p><em>Brackets</em> хорош тем, что у него &mdash; не перегруженный
+            интерфейс, заточенный именно под Веб-дизайн (вот почему у меня не
+            сложились отношения с комбайнами типа <a
+                    href="https://code.visualstudio.com/"
+                    title="Сайт Visual Studio Code"
+                    target="_blank">Visual
+                Studio Code</a> и <a href="https://www.sublimetext.com/"
+                                     title="Сайт редактора Sublime Text 3"
+                                     target="_blank">Sublime Text 3)</a>. У него
+            достаточно плагинов, он стабилен в работе. Но
+            развитие проекта практически остановилось, ничего нового в нем не
+            появляется (в том числе мало
+            новых дополнений от сторонних разработчиков). Поддержка <abbr
+                    title="HyperText Markup Language, version 5">
+                <em>HTML5</em></abbr> реализована далеко не в полном
+            объеме,
+            а уж про всякие вкусности,
+            наподобие <em>&quot;хлебных крошек&quot;</em>
+            (<em>breadcrumbs</em>) из <em>Visual Studio Code</em>, и
+            говорить не приходится. (Нет, конечно, какие-то аналогичные плагины
+            найти можно,
+            но функционал их скуден.)</p>
+        <p>И ещё: <em>Brackets</em> неплох в работе с файлами <kbd>.html</kbd> и
+            <kbd>.css</kbd>; при необходимости, в нём можно работать с
+             файлами <kbd>.md</kbd> (о <em>Markdown</em>-редакторах <a
+                    href="../md/md.html" title="Markdown-редакторы">читать
+                заметку</a>). Но работать в нём с <em>JavaScript</em>-файлами
+            некомфортно, а для отладки скриптов надо прибегать к сторонним
+            программам.</p>
+        <p>А мне нужен инструмент, который одинаково хорошо заточен под
+            <abbr title="HyperText Markup Language"><em>HTML</em></abbr>,
+            <abbr title="Cascading Style Sheets"><em>CSS</em></abbr> и
+            <em>JavaScript</em>, умеет запускать Веб-страницы в
+            различных браузерах и отлаживать код (и &mdash; в идеале &mdash; ещё
+            и
+            позволяет работать с <em>GitHub</em> прямо в своей среде).</p>
+        <p>В какой-то степени это могут делать и другие, в том числе
+            проприетарные и платные редакторы (например, <a
+                    href="https://www.barebones.com/products/bbedit/"
+                    title="Веб-редактор BBEdit" target="_blank">BBEdit</a>
+            для <em>macOS</em>), но они всё-таки больше ориентированы на
+            разметку и меньше &mdash; на программирование. Редкий Веб-редактор
+            полноценно работает с отладкой
+            кода.</p>
+    </section>
+    <section>
+        <h2 id="part03">Наконец-то время WebStorm</h2>
+        <figure><img src="img/webstorm-html.png"
+                     alt="Редактор WebStorm (редактирование проекта)"
+                     height="600"
+                     width="1000">
+        </figure>
+        <p></p>
+        <figure><img src="img/webstorm-js.png"
+                     alt="Редактор WebStorm (редактирование .js-файла)"
+                     height="600"
+                     width="1000">
+        </figure>
+        <p>Вот, наконец, очередь дошла и до <em>WebStorm.</em> Редактор не
+            бесплатен (необходима подписка, хотя есть другие варианты, о них
+            расскажу ниже), но именно на нём я и остановил свой выбор.</p>
+        <p><em>WebStorm</em> специально создан для работы с <abbr
+                title="HyperText Markup Language"><em>HTML</em></abbr>,
+            <abbr title="Cascading Style Sheets"><em>CSS</em></abbr> и
+            <em>JavaScript</em>. Если
+            нужен ещё и <abbr title="PHP: Hypertext Preprocessor"><em>PHP
+            </em></abbr> &mdash; есть <a
+                    href="https://www.jetbrains.com/phpstorm/"
+                    title="Страница редактора PhpStorm"
+                    target="_blank">PhpStorm</a>, в котором к всем возможностям
+            из <em>WebStorm</em> добавлен новый функционал, но за такое
+            удовольствие придётся доплатить.</p>
+        <p><em>WebStorm</em> ориентирован на работу с проектами (хотя в нём
+            можно редактировать и отдельные файлы). Он показывает дерево
+            проекта,
+            позволяет создавать (или удалять, или переименовывать) файлы. Для
+            открытого документа доступен показ и структуры, и &quot;хлебных
+            крошек&quot; (последние видны внизу области редактирования файла).
+            Есть консоль,
+            с которой можно работать внутри редактора. О всяких привычных вещах,
+            вроде проверки орфографии, подсветки синтаксиса, темах оформления и
+            плагинах, я даже и не говорю. В этом редакторе есть много всего
+            нужного и удобного, в том числе и столь необходимый
+            Веб-разработчикам <a href="https://emmet.io/"
+                                 title="Emmet &mdash; the essential toolkit for
+            web-developers" target="_blank">Emmet</a>, и встроенная работа с
+            <em>Git</em>. Редактор поддерживает последние версии языков
+            разметки и <em>JavaScript</em>. Русификации интерфейса нет, но зачем
+            она нужна? (Если
+            Веб-разработчик не знает английского и не читает документацию по
+            языкам разметки и программирования на языке оригинала, то... на этом
+            мысль останавливается.)</p>
+        <p>И да: <em>WebStorm</em>, наконец-таки, очень хорош в работе с
+            <kbd>.js</kbd>-файлами! По моим ощущениям &macr; лучше, чем тот
+            же <em>Visual Studio Code</em>. Файлы не только
+            комфортно создавать (например, сразу видно, что эта переменная ещё
+            не использована), их удобно запускать и отлаживать. В общем, беру
+            такой редактор (и подпиской меня не испугать)!</p>
+        <p>А если подписка испугала вас, то читайте дальше.</p>
+    </section>
+    <section>
+        <h2 id="part04">Для начинающих JavaScript-программистов</h2>
+        <figure><img src="img/intellijidea-logo.png" alt="Логотип IntelliJ IDEA"
+                     height="256" width="256">
+        </figure>
+        <p>У вас есть возможность бесплатно поработать с лицензионным
+            <em>WebStorm</em>  в течение 30 дней. Кроме того, существуют
+            варианты получения бесплатных лицензий или лицензий со скидками (от
+            академических для
+            вузов до лицензий для <em>Open Source</em>em>-разработчиков), надо
+            только потратить некоторое время на их подбор.</p>
+        <p>Если уже вы совсем не хотите или не можете платить, есть ещё два
+            варианта. Правда, они ограничены в функционале, но, например,
+            подойдут для начинающих <em>JavaScript</em>-разработчиков и тех,
+            кто изучает <em>JavaScript</em>.</p>
+        <p>С сайта <em>JetBrains</em> можно получить версию <a
+                href="https://www.jetbrains.com/idea/features/editions_comparison_matrix.html"
+                title="Бесплатная версия IDE от JetBrains"
+                target="_blank">IntelliJ
+            IDEA Community Edition</a>: это урезанный вариант платной
+            <abbr
+                    title="Integrated Development Environment"><em>IDE</em>
+            </abbr>
+            ,
+            однако он поддерживает <abbr title="HyperText Markup Language"><em>HTML</em></abbr>
+            и
+            <em>JavaScript</em> (но не <abbr title="Cascading Style Sheets"><em>CSS</em></abbr>).
+        </p>
+        <p>Для изучающих программирование подойдет и специальная учебная версия
+            <abbr title="Cascading Style Sheets"><em>CSS</em></abbr> &mdash;
+            <a
+                    href="https://www.jetbrains.com/edu-products/download/#section=idea"
+                    title="IntelliJ IDEA, образовательная версия"
+                    target="_blank">IntelliJ IDEA Edu</a>.
+            Этот продукт не только бесплатен, но еще и распространяется под
+            <em>Open Source</em>-лицензией.</p>
+        <p>Данные версии, кстати, могут быть использованы и в качестве
+            &quot;песочниц&quot; для изучающих <em>JavaScript</em> (о
+            &quot;песочницах&quot; <a href="../js/js-playgrounds.html"
+                                      title="Выбор песочницы для изучения JavaScript">читать
+                заметку).</a></p>
+    </section>
+    <section>
+        <h2 id="part05">Бонус: встречайте PyCharm</h2>
+        <figure><img src="img/pycharm.png"
+                     alt="PyCharm - программа для разработки на Python"
+                     height="600" width="1000">
+        </figure>
+        <p>Если вы пишите программы на <em>Python</em> или серьезно занимаетесь
+            его
+            изучением, то вам подойдет еще один платный редактор от
+            <em>JetBrains</em>: <a href="https://www.jetbrains.com/pycharm/"
+                                   title="" target="_blank">PyCharm</a>
+            (), который умеет
+            многочисленно всего разного, что и не снилось даже мудрым опытным
+            программистам.</p>
+        <p>Не хотите платить (особенно если вы только начинаете свой путь в
+            программировании) - не надо: встречайте несколько ограниченный в
+            возможностях в сравнении с платным собратом, но при этом достаточно
+            функциональный PyCharm Community edition
+            (https://www.jetbrains.com/pycharm/features/#chooseYourEdition). Я
+            пока пользуюсь именно этой "младшей" версией.</p>
+        <p>Нужна версия для обучения - взгляните на свободный PyCharm Edu
+            (https://www.jetbrains.com/edu-products/download/#section=pycharm-edu).</p>
+        <p>Данные бесплатно распространяемые версии могут быть использованы и в
+            качестве "песочниц" для изучающих Python (о "песочницах читать
+            заметку).</p>
+    </section>
+    <section>
+        <h2 id="part06">И ещё один приятный бонус</h2>
+        <figure><img src="img/font.png" alt="Шрифт JetBrains Mono" height="585"
+                     width="1000">
+        </figure>
+        <p><em>*Здесь должны звучать фанфары, потому что вы дочитали эту
+            заметку почти до самого конца и получаете ещё один бонус!*</em></p>
+        <p>В качестве последней серёжки для самой младшей сестрёнки:
+            забирайте свободно распространяемый бесплатный моноширинный шрифт
+            <kbd><a href="https://www.jetbrains.com/ru-ru/lp/mono/"
+                    title="Свободно распространяемый бесплатный шрифт JetBrains Mono"
+                    target="_blank">JetBrains Mono</a></kbd>. Он
+            отлично подойдет для любого редактора кода, даже если это не
+            продукты от <em>JetBrains</em>.</p>
+        <p>А компании <em>JetBrains</em> - большое спасибо за отличные
+            продукты!</p>
+        <p><abbr title="Post Scriptum">P.S.</abbr> Данная страница создвалась
+            именно в <a
+                    href="https://www.jetbrains.com/webstorm/"
+                    title="Страница редактора Webstorm"
+                    target="_blank">WebStorm</a>.</p>
+    </section>
+</main>
+<footer>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+    <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
+        Щербина</a>, 21.05.2020
+    </address>
+</footer>
+</body>
+
+</html>
