@@ -6,83 +6,151 @@
     <title>Выбор песочницы для изучения Python</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Анатолий Щербина">
-    <meta name="description" content="Рекомендации по выбору песочницы изучения языка программирования Python">
-    <meta name="keywords" content="Python, программирование, консоль, IDLE, Thonny, Анатолий Щербина">
+    <meta name="description"
+          content="Рекомендации по выбору песочницы изучения языка программирования Python">
+    <meta name="keywords"
+          content="Python, программирование, консоль, IDLE, Thonny, Анатолий Щербина">
     <link rel="stylesheet" href="python.css">
 </head>
 
 <body>
-    <header id="beginning">
-        <h1>Выбор песочницы для изучения Python</h1>
-    </header>
-    <nav>
-        <p class="itpage"><a href="/index.html" title="К списку заметок компьютерной тематики">&rarr;&nbsp;За компьютером</a></p>
-        <figure><img src="img/python.png" alt="Логотип Python" height="256" width="256"></figure>
-        <ul class="navlinks">
-            <li><a href="#part01">&quot;Песочница&quot; для изучения Python</a></li>
-            <li>
-                <a href="#part02">Онлайновая среда в браузере</a>
+<header id="beginning">
+    <h1>Выбор песочницы для изучения Python</h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img src="img/python.png" alt="Логотип Python" height="256"
+                 width="256"></figure>
+    <ul class="navlinks">
+        <li><a href="#part01">&quot;Песочница&quot; для изучения Python</a></li>
+        <li>
+            <a href="#part02">Онлайновая среда в браузере</a>
+        </li>
+        <li>
+            <a href="#part03">Python IDLE</a>
+        </li>
+        <li>
+            <a href="#part04">Запуск Python в терминале</a>
+        </li>
+        <li>
+            <a href="#part05">Специализированные Python-песочницы</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">&quot;Песочница&quot; для изучения Python</h2>
+        <p>Тем, кто приступает к освоению <a href="https://www.python.org/"
+                                             title="Сайт Python.org"
+                                             target="_blank">Python</a>,
+            необходима &quot;песочница&quot;, в которой можно было бы
+            редактировать, запускать и отлаживать изучаемый код. Подбору такой
+            песочницы и посвящена данная заметка. Все рекомендуемые в ней
+            программы и веб-ресурсы могут быть использованы в любой операционной
+            системе (но приводиться примеры будут для <em>macOS 10.15
+                Catalina</em>).</p>
+        <p>Программы, применяемые в качестве песочницы, могут быть:</p>
+        <ul>
+            <li>онлайновыми (запускаемыми в браузере);</li>
+            <li>оффлайными на основе поставляемой вместе c <em>Python</em>
+                средой <abbr
+                        title="Integrated Development and Learning Environment">
+                    <em>IDLE</em></abbr>;
             </li>
-            <li>
-                <a href="#part03">Python IDLE</a>
-            </li>
-            <li>
-                <a href="#part04">Запуск Python в терминале</a>
-            </li>
-            <li>
-                <a href="#part05">Специализированные Python-песочницы</a>
-            </li>
+            <li>оффлайновыми, запускаемыми в терминале;</li>
+            <li>оффлайновыми, запускаемыми в специальных программах.</li>
         </ul>
-    </nav>
-    <main>
-        <section>
-            <h2 id="part01">&quot;Песочница&quot; для изучения Python</h2>
-            <p>Тем, кто приступает к освоению <a href="https://www.python.org/" title="Сайт Python.org" target="_blank">Python</a>, необходима &quot;песочница&quot;, в которой можно было бы редактировать, запускать и отлаживать изучаемый код. Подбору такой
-                песочницы и посвящена данная заметка. Все рекомендуемые в ней программы и веб-ресурсы могут быть использованы в любой операционной системе (но приводиться примеры будут для <em>macOS 10.15
-                    Catalina</em>).</p>
-            <p>Программы, применяемые в качестве песочницы, могут быть:</p>
-            <ul>
-                <li>онлайновыми (запускаемыми в браузере);</li>
-                <li>оффлайными на основе поставляемой вместе c <em>Python</em> средой <abbr title="Integrated Development and Learning Environment"> <em>IDLE</em></abbr>;</li>
-                <li>оффлайновыми, запускаемыми в терминале;</li>
-                <li>оффлайновыми, запускаемыми в специальных программах.</li>
-            </ul>
-            <figure><img src="img/vscode.png" alt="Редактор Visual Studio Code" height="600" width="1000"></figure>
-            <p>Также свой код разработчики могут запускать в специальных редакторах кода или интегрированных средах разработки (<em>Integrated Development Environment</em>, или сокращённо <abbr title="Integrated Development Environment"><em>IDE</em></abbr>),
-                как, например, <em>Visual Studio
-                    Code</em>, но этот вариант не всегда удобен начинающим программистам и в данной заметке рассматриваться не будет.
-            </p>
-        </section>
-        <section>
-            <h2 id="part02">Онлайновая среда в браузере</h2>
-            <figure><img src="img/online-scratchpad.png" alt="Онлайн-консоль jsconsole" height="600" width="1000"></figure>
-            <p>Это простой и доступный вариант, для него требуется лишь браузер. В качестве примера можно привести онлайновый редактор, он же электронный блокнот <a href="https://repl.it/" title="Python Scratchpad" target="_blank">Python Scratchpad</a>. При всём их удобстве (а онлайновые блокноты также дают возможность сохранять файлы в аккаунте пользователя), основной недостаток таких сервисов &mdash; ограниченные средства отладки кода. В случае ошибок в программе сервис может просто &quot;зависнуть&quot; без выдачи каких-либо сообщений.</p>
-        </section>
-        <section>
-            <h2 id="part03">Python <abbr title="Integrated Development and Learning Environment">IDLE</abbr></h2>
-            <figure><img src="img/idle-editor.png" alt="Редактор IDLE" height="350" width="750"></figure>
-            <figure><img src="img/idle-run.png" alt="Оболочка IDLE с запущенной программой" height="350" width="750"></figure>
-            <p>Интерпретатор <em>Python</em> уже поставляется вместе с отличным инструментом, которым является <abbr title="Integrated Development and Learning Environment"><em>IDLE</em></abbr> &mdash; интегрированная среда разработки и обучения. С помощью <abbr title="Integrated Development and Learning Environment"><em>IDLE</em></abbr> можно просматривать программы (файлы <kbd>.py</kbd>), запускать их, отлаживать, редактировать, а также писать собственные программы. <abbr title="Integrated Development and Learning Environment"><em>IDLE</em></abbr> поддерживает подсветку синтаксиса и контекстные подсказки. Может быть, это и не самый удобный инструмент, но он всегда под рукой!</p>
-        </section>
-        <section>
-            <h2 id="part04">Запуск Python в терминале</h2>
-            <figure><img src="img/terminal.png" alt="Запуск Python в терминале" height="600" width="890"></figure>
-            <p>Все операционные системы имеют специальные программы-терминалы, в которых можно работать и с кодом
-                <em>Python</em>. В зависимости от <em>ОС</em>, интерпретатор запускается в терминале командой <kbd>python3</kbd> или просто <kbd>python</kbd>.</p>
-            <p>Интерпретатору можно сразу передать имя запускаемого файла: например, <kbd>python3&nbsp;file.js</kbd>. Его также можно запустить в интерактивном режиме: <kbd>python3&nbsp;-i.</kbd> В этом режиме код можно вводить построчно, а для его исполнения требуется ввести дополнительную пустую строку. В общем, это тоже инструмент, который всегда имеется в распоряжении пользователя.</p>
-        </section>
-        <section>
-            <h2 id="part05">Специализированные Python-песочницы</h2>
-            <figure><img src="img/thonny.png" alt="Программа Thonny" height="600" width="1000"></figure>
-            <p>Для начинающего программиста такие программы-песочницы могут стать самым удобным вариантом. Примером подобной песочницы является кроссплатформенная бесплатная программа <a href="https://thonny.org/" title="Сайт Thonny" target="_blank">Thonny</a>, которая позиционируется как <abbr title="Integrated Development Environment"><em>IDE</em></abbr> для начинающих программистов. Она позволяет делать всё то же, что и &quot;родная&quot; среда <abbr title="Integrated Development and Learning Environment"><em>IDLE</em></abbr>, но также оснащена дополнительными опциями, в том числе возможностью делать в отдельном окне заметки и видеть сообщения специального &quot;Ассистента&quot;.</p>
-            <p>В общем, пробуйте различные варианты и вы найдете тот, который удобен именно вам.</p>
-        </section>
-    </main>
-    <footer>
-        <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К началу страницы</a></p>
-        <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
-                Щербина</a>, 12.05.2020</address>
-    </footer>
+        <figure><img src="img/vscode.png" alt="Редактор Visual Studio Code"
+                     height="600" width="1000"></figure>
+        <p>Также свой код разработчики могут запускать в специальных редакторах
+            кода или интегрированных средах разработки (<em>Integrated
+                Development Environment</em>, или сокращённо <abbr
+                    title="Integrated Development Environment"><em>IDE</em></abbr>),
+            как, например, <em>Visual Studio
+                Code</em>, но этот вариант не всегда удобен начинающим
+            программистам и в данной заметке рассматриваться не будет.
+        </p>
+    </section>
+    <section>
+        <h2 id="part02">Онлайновая среда в браузере</h2>
+        <figure><img src="img/online-scratchpad.png"
+                     alt="Онлайн-консоль jsconsole" height="600" width="1000">
+        </figure>
+        <p>Это простой и доступный вариант, для него требуется лишь браузер. В
+            качестве примера можно привести онлайновый редактор, он же
+            электронный блокнот <a href="https://repl.it/"
+                                   title="Python Scratchpad" target="_blank">Python
+                Scratchpad</a>. При всём их удобстве (а онлайновые блокноты
+            также дают возможность сохранять файлы в аккаунте пользователя),
+            основной недостаток таких сервисов &mdash; ограниченные средства
+            отладки кода. В случае ошибок в программе сервис может просто &quot;зависнуть&quot;
+            без выдачи каких-либо сообщений.</p>
+    </section>
+    <section>
+        <h2 id="part03">Python <abbr
+                title="Integrated Development and Learning Environment">IDLE</abbr>
+        </h2>
+        <figure><img src="img/idle-editor.png" alt="Редактор IDLE" height="350"
+                     width="750"></figure>
+        <figure><img src="img/idle-run.png"
+                     alt="Оболочка IDLE с запущенной программой" height="350"
+                     width="750"></figure>
+        <p>Интерпретатор <em>Python</em> уже поставляется вместе с отличным
+            инструментом, которым является <abbr
+                    title="Integrated Development and Learning Environment"><em>IDLE</em></abbr>
+            &mdash; интегрированная среда разработки и обучения. С помощью <abbr
+                    title="Integrated Development and Learning Environment"><em>IDLE</em></abbr>
+            можно просматривать программы (файлы <kbd>.py</kbd>), запускать их,
+            отлаживать, редактировать, а также писать собственные программы.
+            <abbr title="Integrated Development and Learning Environment"><em>IDLE</em></abbr>
+            поддерживает подсветку синтаксиса и контекстные подсказки. Может
+            быть, это и не самый удобный инструмент, но он всегда под рукой!</p>
+    </section>
+    <section>
+        <h2 id="part04">Запуск Python в терминале</h2>
+        <figure><img src="img/terminal.png" alt="Запуск Python в терминале"
+                     height="600" width="890"></figure>
+        <p>Все операционные системы имеют специальные программы-терминалы, в
+            которых можно работать и с кодом
+            <em>Python</em>. В зависимости от <em>ОС</em>, интерпретатор
+            запускается в терминале командой <kbd>python3</kbd> или просто <kbd>python</kbd>.
+        </p>
+        <p>Интерпретатору можно сразу передать имя запускаемого файла: например,
+            <kbd>python3&nbsp;file.js</kbd>. Его также можно запустить в
+            интерактивном режиме: <kbd>python3&nbsp;-i.</kbd> В этом режиме код
+            можно вводить построчно, а для его исполнения требуется ввести
+            дополнительную пустую строку. В общем, это тоже инструмент, который
+            всегда имеется в распоряжении пользователя.</p>
+    </section>
+    <section>
+        <h2 id="part05">Специализированные Python-песочницы</h2>
+        <figure><img src="img/thonny.png" alt="Программа Thonny" height="600"
+                     width="1000"></figure>
+        <p>Для начинающего программиста такие программы-песочницы могут стать
+            самым удобным вариантом. Примером подобной песочницы является
+            кроссплатформенная бесплатная программа <a
+                    href="https://thonny.org/" title="Сайт Thonny"
+                    target="_blank">Thonny</a>, которая позиционируется как
+            <abbr title="Integrated Development Environment"><em>IDE</em></abbr>
+            для начинающих программистов. Она позволяет делать всё то же, что и
+            &quot;родная&quot; среда <abbr
+                    title="Integrated Development and Learning Environment"><em>IDLE</em></abbr>,
+            но также оснащена дополнительными опциями, в том числе возможностью
+            делать в отдельном окне заметки и видеть сообщения специального
+            &quot;Ассистента&quot;.</p>
+        <p>В общем, пробуйте различные варианты и вы найдете тот, который удобен
+            именно вам.</p>
+    </section>
+</main>
+<footer>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+    <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
+        Щербина</a>, 12.05.2020
+    </address>
+</footer>
 </body>
 
 </html>

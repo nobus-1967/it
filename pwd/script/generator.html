@@ -5,28 +5,40 @@
     <meta charset="utf-8">
     <title>Генератор паролей</title>
     <meta name="author" content="Анатолий Щербина">
-    <meta name="description" content="Демонстрация генерации пароля средствами JavaScript">
-    <meta name="keywords" content="JavaScript, пароль, генератор паролей, рандом Math.random(), Анатолий Щербина">
+    <meta name="description"
+          content="Демонстрация генерации пароля средствами JavaScript">
+    <meta name="keywords"
+          content="JavaScript, пароль, генератор паролей, рандом Math.random(), Анатолий Щербина">
     <link rel="stylesheet" href="generator.css">
 </head>
 
 <body>
-    <h1>Генератор паролей</h1>
-    <p>Этот скрипт генерирует пароль длиной 8 символов со следующими условиями:</p>
-    <ol>
-        <li>Первый символ пароля &mdash; всегда <em>буква латинского алфавита</em> (прописная или строчная).</li>
-        <li>Следующие 6 символов могут быть либо <em>буквами</em> в любом регистре, либо <em>цифрами</em> <em>0-9</em>, либо <em>знаками</em> <em>&quot;-&quot;</em> и <em>&quot;_&quot;</em>.</li>
-        <li>Последний символ &mdash; всегда либо <em>буква</em> (в любом регистре), либо <em>цифра</em>.</li>
-    </ol>
-    <script src="generator.js"></script>
-    <h2>Щелкните на нужной кнопке</h2>
-    <ul>
-        <li>Для получения нового пароля:<br>
-            <input type="button" name="password" class="button" value="НОВЫЙ ПАРОЛЬ" onclick="alertPassword()"></li>
-        <li>Для перезагрузки скрипта (чтобы сгенерировать следующий пароль):<br>
-            <input type="button" name="reset" class="button" value="ПЕРЕЗАГРУЗИТЬ" onclick="location.reload()"></li>
-    </ul>
-    <p class="pwdpage"><a href="../pwd.html" title="К заметке">&larr;&nbsp;К заметке &quot;Пример генерации пароля средствами JavaScript&quot;</a></p>
+<h1>Генератор паролей</h1>
+<p>Этот скрипт генерирует пароль длиной 8 символов со следующими условиями:</p>
+<ol>
+    <li>Первый символ пароля &mdash; всегда <em>буква латинского алфавита</em>
+        (прописная или строчная).
+    </li>
+    <li>Следующие 6 символов могут быть либо <em>буквами</em> в любом регистре,
+        либо <em>цифрами</em> <em>0-9</em>, либо <em>знаками</em> <em>&quot;-&quot;</em>
+        и <em>&quot;_&quot;</em>.
+    </li>
+    <li>Последний символ &mdash; всегда либо <em>буква</em> (в любом регистре),
+        либо <em>цифра</em>.
+    </li>
+</ol>
+<script src="generator.js"></script>
+<h2>Щелкните на нужной кнопке</h2>
+<ul>
+    <li>Для получения нового пароля:<br>
+        <input type="button" name="password" class="button" value="НОВЫЙ ПАРОЛЬ"
+               onclick="alertPassword()"></li>
+    <li>Для перезагрузки скрипта (чтобы сгенерировать следующий пароль):<br>
+        <input type="button" name="reset" class="button" value="ПЕРЕЗАГРУЗИТЬ"
+               onclick="location.reload()"></li>
+</ul>
+<p class="pwdpage"><a href="../pwd.html" title="К заметке">&larr;&nbsp;К заметке
+    &quot;Пример генерации пароля средствами JavaScript&quot;</a></p>
 </body>
 
 </html>
