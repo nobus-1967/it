@@ -7,7 +7,7 @@ let password = ''
 
 function getPassword(FIRST, SECOND, THIRD) {
   password += FIRST[Math.floor(Math.random() * FIRST.length)]
-  for (let i = 0; i < 6; ++i) {
+  for (let i = 0; i < 6; i++) {
     password += SECOND[Math.floor(Math.random() * SECOND.length)]
   }
   password += THIRD[Math.floor(Math.random() * THIRD.length)]
