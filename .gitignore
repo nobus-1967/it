@@ -21,3 +21,4 @@ webstorm/img/.DS_Store
 .idea/it.iml
 .idea/dictionaries/nobus.xml
 .idea/codeStyles/codeStyleConfig.xml
+.prettierrc
