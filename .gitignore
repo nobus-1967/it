@@ -22,3 +22,5 @@ webstorm/img/.DS_Store
 .idea/dictionaries/nobus.xml
 .idea/codeStyles/codeStyleConfig.xml
 .prettierrc
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLinters/jshint.xml
