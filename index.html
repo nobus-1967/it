@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>За компьютером</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Анатолий Щербина">
-    <meta name="description"
-          content="Заметки на компьютерную тематику (операционные системы Linux и macOS, Веб-дизайн, программирование)">
-    <meta name="keywords"
-          content="Linux, macOS, операционные системы, Веб-дизайн, HTML5, CCS3, JavaScript, Node.js, программирование, Анатолий Щербина">
-    <meta name="yandex-verification" content="0b22228f70b68c5d">
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Анатолий Щербина" name="author">
+    <meta content="Заметки на компьютерную тематику (операционные системы Linux и macOS, Веб-дизайн, программирование)"
+          name="description">
+    <meta content="Linux, macOS, операционные системы, Веб-дизайн, HTML5, CCS3, JavaScript, Node.js, программирование, Анатолий Щербина"
+          name="keywords">
+    <meta content="0b22228f70b68c5d" name="yandex-verification">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
     <h1>За компьютером</h1>
 </header>
 <article>
-    <figure><img src="img/computer.png" alt="Изображение компьютера"
-                 height="256" width="256"></figure>
+    <figure><img alt="Изображение компьютера" height="256"
+                 src="img/computer.png" width="256"></figure>
     <h2>macOS, Linux, HTML5, CSS3, Javascript и не только</h2>
     <p>Здравствуйте, меня зовут <strong>Анатолий Щербина</strong>. Здесь собраны
         мои заметки компьютерной тематики: то, что я сам нашел для себя
@@ -33,31 +33,70 @@
 </article>
 <nav>
     <ul class="menu">
-        <li><a href="#webstorm"
-               title="Как я перестал беспокоиться и полюбил JetBrains"
-               class="menulink">Как я перестал беспокоиться и полюбил
+        <li><a class="menulink"
+               href="#sqlite"
+               title="Выбор песочницы для изучения SQLite">Выбор песочницы для
+            изучения SQLite</a></li>
+        <li><a class="menulink"
+               href="#webstorm"
+               title="Как я перестал беспокоиться и полюбил JetBrains">Как я
+            перестал беспокоиться и полюбил
             JetBrains</a></li>
-        <li><a href="#python" title="Выбор песочницы для изучения Python"
-               class="menulink">Выбор песочницы для изучения Python</a></li>
-        <li><a href="#pwd"
-               title="Пример генерации паролей средствами  JavaScript"
-               class="menulink">Пример генерации паролей средствами
+        <li><a class="menulink" href="#python"
+               title="Выбор песочницы для изучения Python">Выбор песочницы для
+            изучения Python</a></li>
+        <li><a class="menulink"
+               href="#pwd"
+               title="Пример генерации паролей средствами  JavaScript">Пример
+            генерации паролей средствами
              JavaScript</a></li>
-        <li><a href="#lorem" title="Генерация Lorem Ipsum для Веб-дизайнеров"
-               class="menulink">Генерация Lorem Ipsum для Веб-дизайнеров</a>
+        <li><a class="menulink" href="#lorem"
+               title="Генерация Lorem Ipsum для Веб-дизайнеров">Генерация Lorem
+            Ipsum для Веб-дизайнеров</a>
         </li>
-        <li><a href="#finder" title="Файловые менеджеры для macOS"
-               class="menulink">Файловые менеджеры для macOS</a></li>
-        <li><a href="#md" title="Markdown-редакторы" class="menulink">Markdown-редакторы</a>
+        <li><a class="menulink" href="#finder"
+               title="Файловые менеджеры для macOS">Файловые менеджеры для
+            macOS</a></li>
+        <li><a class="menulink" href="#md" title="Markdown-редакторы">Markdown-редакторы</a>
         </li>
-        <li><a href="#js" title="Выбор песочницы для изучения JavaScript"
-               class="menulink">Выбор песочницы для изучения JavaScript</a></li>
+        <li><a class="menulink" href="#js"
+               title="Выбор песочницы для изучения JavaScript">Выбор песочницы
+            для изучения JavaScript</a></li>
     </ul>
 </nav>
+<article id="sqlite">
+    <h2>Выбор песочницы для изучения SQLite</h2>
+    <figure><img alt="Программа SQLiteFlow" height="600"
+                 src="sqlite3/img/sqliteflow.png" width="1000"></figure>
+    <p>Изучение многочисленных <abbr
+            title="Система управления базами данных">СУБД</abbr>, прежде всего
+        использующих диалекты языка <em>SQL</em>, по многим причинам
+        целесообразно начать с <em>SQLite</em>. Простая, кроссплатформенная, не
+        требующая серверной среды и поэтому доступная на
+        любом домашнем компьютере, по сути не требующая установки (скачал архив
+        с предкомпилированным бинарным файлом, распаковал в нужную папку,
+        запустил &mdash; и играйся в своё удовольствие!), но при этом обладающая
+        многими возможностями <em>SQL</em> и позволяющая создавать настоящие
+        базы данных
+        как для домашнего использования, так и для относительно небольших
+        организаций &mdash; всё это делает <em>SQLite</em> идеальной средой для
+        обучения.</p>
+    <p>В этой заметке я расскажу о том, какие &quot;песочницы &quot; могут
+        пригодиться пользователю, приступающему к изучению <em>SQLite</em>.
+        Почти все рекомендуемые в ней программы и веб-ресурсы могут быть
+        использованы в любой
+        операционной системе (но приводиться примеры будут для <em>macOS
+            10.15 Catalina</em>em>).</p>
+    <p><a href="sqlite3/sqlite.html"
+          title="Выбор песочницы для изучения SQLite">&rarr;&nbsp;Читать
+        заметку</a></p>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+</article>
 <article id="webstorm">
     <h2>Как я перестал беспокоиться и полюбил JetBrains</h2>
-    <figure><img src="webstorm/img/webstorm-html.png" alt="Редактор Webstorm"
-                 height="600"
+    <figure><img alt="Редактор Webstorm" height="600"
+                 src="webstorm/img/webstorm-html.png"
                  width="1000"></figure>
     <p>Данная заметка ни в коей мере не является рекламой продуктов компании
         <em>JetBrains</em> или
@@ -76,7 +115,7 @@
 </article>
 <article id="python">
     <h2>Выбор песочницы для изучения Python</h2>
-    <figure><img src="python/img/thonny.png" alt="Программа Thonny" height="600"
+    <figure><img alt="Программа Thonny" height="600" src="python/img/thonny.png"
                  width="1000"></figure>
     <p>Тем, кто приступает к освоению <em>Python</em>, необходима &quot;песочница&quot;,
         в которой можно было бы редактировать, запускать и отлаживать изучаемый
@@ -91,8 +130,8 @@
 </article>
 <article id="pwd">
     <h2>Пример генерации паролей средствами  JavaScript</h2>
-    <figure><img src="pwd/img/generator.png" alt="Работа генератора паролей"
-                 height="600" width="1000"></figure>
+    <figure><img alt="Работа генератора паролей" height="600"
+                 src="pwd/img/generator.png" width="1000"></figure>
     <p>Генерация псевдослучайных последовательностей символов, в том числе
         паролей, &mdash; стандартная задача, которая достаточно просто
         реализуется средствами <em>JavaScript</em>. Для этого не нужны никакие
@@ -111,8 +150,8 @@
 </article>
 <article id="lorem">
     <h2>Генерация Lorem Ipsum для Веб-дизайнеров</h2>
-    <figure><img src="lorem/img/getlorem.png" alt="Запуск getlorem в консоли"
-                 height="600" width="890"></figure>
+    <figure><img alt="Запуск getlorem в консоли" height="600"
+                 src="lorem/img/getlorem.png" width="890"></figure>
     <p>При создании макета Веб-сайта часто необходима &quot;рыба&quot; &mdash;
         текст, который потом будет заменён контентом. В качестве такой рыбы
         издавна выступает известный псевдо-латинский текст <em>Lorem Ipsum</em>
@@ -128,8 +167,8 @@
 </article>
 <article id="finder">
     <h2>Файловые менеджеры для macOS</h2>
-    <figure><img src="finder/img/forklift.png" alt="Markdown-редактор MacDown"
-                 height="585" width="1000"></figure>
+    <figure><img alt="Markdown-редактор MacDown" height="585"
+                 src="finder/img/forklift.png" width="1000"></figure>
     <p>Стандартный файловый менеджер <em>macOS</em> &mdash;
         <strong>Finder</strong> &mdash; может многое, в том числе работать с
         архивами <kbd>.zip</kbd>, устанавливать сетевые соединения и отображать
@@ -147,8 +186,8 @@
 </article>
 <article id="md">
     <h2>Markdown-редакторы</h2>
-    <figure><img src="md/img/macdown.png" alt="Markdown-редактор MacDown"
-                 height="585" width="1000"></figure>
+    <figure><img alt="Markdown-редактор MacDown" height="585"
+                 src="md/img/macdown.png" width="1000"></figure>
     <p>В заметке речь идёт о редакторах для работы с популярным облегченным
         языком разметки <em>Markdown</em>. Сейчас файлы  <kbd>.md</kbd> широко
         распространены в сети и используются многими сервисами и платформами, в
@@ -163,8 +202,8 @@
 </article>
 <article id="js">
     <h2>Выбор песочницы для изучения JavaScript</h2>
-    <figure><img src="js/img/runjs.png" alt="JavaScript-консоль RuJS"
-                 height="600" width="1000"></figure>
+    <figure><img alt="JavaScript-консоль RuJS" height="600"
+                 src="js/img/runjs.png" width="1000"></figure>
     <p>Тем, кто приступает к освоению <em>JavaScript</em>, необходима &quot;песочница&quot;,
         в которой можно было бы запускать и отлаживать изучаемый код. Подбору
         такой песочницы и посвящена данная заметка. Все рекомендуемые в ней
