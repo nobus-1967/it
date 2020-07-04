@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Импорт данных из файлов Microsoft Access</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Анатолий Щербина" name="author">
+    <meta content="Опыт импорта данных из  MS Access  в сторонние приложения"
+          name="description">
+    <meta content="Microsoft Access, СУБД, Database, SQL, DB Browser for SQLite, RebaseData, LibreOffice, Анатолий Щербина"
+          name="keywords">
+    <link href="access.css" rel="stylesheet">
+</head>
+
+<body>
+<header id="beginning">
+    <h1>Импорт данных из файлов Microsoft Access</h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img alt="Иконка файла CSV" height="256" src="img/csv.png"
+                 width="178"></figure>
+    <ul class="navlinks">
+        <li><a href="#part01">Процедура импорта файлов и данные для импорта</a>
+        </li>
+        <li><a href="#part02">Шаг 1 (вариант 1). Импорт данных с помощью
+            онлайн-сервиса</a>
+        </li>
+        <li><a href="#part03">Шаг 1 (вариант 2). Импорт данных с помощью
+            специальной утилиты</a></li>
+        <li><a href="#part04">Шаг 2 (вариант 1). Экспорт данных в СУБД</a></li>
+        <li><a href="#part05">Шаг 2 (вариант 2). Экспорт данных в сторонний
+            офисный пакет</a></li>
+        <li><a href="#part06">А вы знаете, что..?</a></li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">Процедура импорта файлов и данные для импорта</h2>
+        <figure><img alt="Файл в формате .csv" height="380"
+                     src="img/cvs_text.png" width="1000"></figure>
+        <p>Проприетарные форматы файлов &mdash; это зло. Прежде всего потому,
+            что у
+            пользователя может не быть альтернативы: никакая другая
+            программа, кроме &quot;родной&quot;, не даст возможность открыть и
+            обработать данные файлы. Яркий тому пример &mdash; <abbr
+                    title="Система управления базами данных">СУБД</abbr>
+            <em>Microsoft Access</em>. Если на компьютерах с <em>ОС Microsoft
+                Windows</em> пользователь при необходимости может купить себе
+            копию программы (или, на худой конец, поставить
+            распространяемую компанией-разработчиком <em>среду выполнения
+                Access 2010</em> и тем самым получить доступ к необходимым ему
+            данным), то, например, для <em>macOS</em> никакой версии <em>MS
+                Access</em> хотя бы с урезанным функционалом не существует
+            вовсе (и компания <em>Microsoft</em>, похоже, в обозримом будущем не
+            собирается её выпускать). Поэтому в настоящей заметке я поделюсь
+            опытом решения данной проблемы на примере
+            <em>macOS 10.15 Catalina</em>.</p>
+        <p>В таком случае приходится импортировать данные в сторонние
+            приложения. В частности, для файлов баз данных в формате
+            <kbd>.accdb</kbd> (как и более ранних версий в формате
+            <kbd>.mdb</kbd>) необходимо выполнить два шага:</p>
+        <ol>
+            <li>С помощью сторонней утилиты или сервиса импортировать данные в
+                доступный формат. Таким форматом я выбрал <abbr
+                        title="Comma-Separated Values">CSV</abbr> &mdash;
+                стандартный тестовый формат, предназначенный для
+                представления табличных данных.
+            </li>
+            <li>Открыть файл или файлы <kbd>.csv</kbd> в доступном вам
+                приложении. Это может быть <abbr
+                        title="Система управления базами данных">СУБД</abbr>
+                (даже в самой простой версии &mdash; <em>SQLite</em>),
+                графический инструмент для работы с базами данных или другой
+                офисный пакет, поддерживающий работу с <abbr
+                        title="База данных">БД</abbr>.
+            </li>
+        </ol>
+        <p>В качестве примера импорта файлов <em>MS Access</em> в заметке
+            будет использована учебная база данных из 4-го издания книги &quot;SQL
+            за 10 минут&quot; (&quot;Sams Teach Yourself SQL in 10 Minutes,
+            Fourth Edition&quot;). База данных в формате <em>Microsoft Access
+                2000, 2003</em> (файл <kbd>.mdb</kbd>) доступна для загрузки
+            по
+            <a href="https://forta.com/wp-content/uploads/books/0672336073/TeachYourselfSQL_Access2000.zip"
+               target="_blank">данному адресу</a>.
+            База данных в формате <em>Microsoft Access 2007, 2010, 2013</em>
+            (файл <kbd>.accdb</kbd>) доступна для загрузки по <a
+                    href="https://forta.com/wp-content/uploads/books/0672336073/TeachYourselfSQL_Access2007.zip"
+                    target="_blank">данному
+                адресу</a>.</p>
+        <p><strong>Примечание:</strong> <abbr
+                title="Comma-Separated Values">CVS</abbr>
+            на самом деле является стандартом для обмена данными и представляет
+            собой простой текстовый файл, каждая строка которого является
+            строкой
+            таблицы <abbr title="База данных">БД</abbr> в виде значений с
+            разделителями (обычно запятыми): <a href="https://tools.ietf
+            .org/html/rfc4180" target="_blank" title="Стандарт RFC 4180">RFC
+                4180</a>.</p>
+    </section>
+    <section>
+        <h2 id="part02">Шаг 1 (вариант 1). Импорт данных с помощью
+            онлайн-сервиса</h2>
+        <figure><img alt="Онлайн-конвертер на сайте RebaseData"
+                     height="575" src="img/rebasedata.png" width="1000"/>
+        </figure>
+        <p>Если файл относительно небольшой (до 10 мегабайт), то для импорта
+            данных в формат <abbr title="Comma-Separated Values">CVS</abbr>
+            можно воспользоваться онлайн-сервисом с сайта <a
+                    href="https://www.rebasedata.com/"
+                    target="_blank"
+                    title="Сайт RebaseData">RebaseData</a>. Вы
+            просто загружаете нужный файл <kbd>.accdb</kbd> или <kbd>.mdb</kbd>
+            и затем скачиваете папку с конвертированными файлами (по числу
+            таблиц в базе данных). В этой папке будут нужные нам файлы
+            формата <kbd>.csv</kbd> с именами таблиц из первоначальной <abbr
+                    title="База данных">БД</abbr>, например,
+            <kbd>Customers.csv</kbd>, а также файлы с расширением
+            <kbd>.columns</kbd>, в которых содержится информация о типах данных
+            из первоначальных таблиц. Нам понадобятся только файлы <abbr
+                    title="Comma-Separated Values">CVS</abbr>!</p>
+    </section>
+    <section>
+        <h2 id="part03">Шаг 1 (вариант 2). Импорт данных с помощью специальной
+            утилиты</h2>
+        <figure><img alt="Утилита jetread" height="645" src="img/jetread.png"
+                     width="1000"/></figure>
+        <p>Можно также воспользоваться офлайновыми утилитами. В частности,
+            утилита <kbd>jetread</kbd> с сайта <a
+                    href="https://eggerapps.at/jetread/"
+                    target="_blank" title="Утилита jetread">EGGER APPS</a>
+            позволяет конвертировать файлы большого размера.</p>
+        <p>Загрузим утилиту, распакуем её, в ту же папку положим файл для
+            конвертации (например, <kbd>tysql.accdb</kbd>), перейдем в
+            терминале в эту папку и запустим утилиту командой:</p>
+        <p><code>./jetread tysql.accdb list-table</code></p>
+        <p>Утилита покажет нам наименования таблиц в файле. Теперь надо
+            конвертировать каждую(!) из таблиц в отдельный файл
+            <kbd>.csv</kbd>, подставляя в команду нужные имена таблиц, например:
+        </p>
+        <p><code>./jetread tysql.accdb export Customers -fmt csv >
+            Customers.csv</code></p>
+        <p>В результате у вас должно получиться 5 файлов:</p>
+        <ul>
+            <li><kbd>Customers.csv</kbd></li>
+            <li><kbd>OrderItems.csv</kbd></li>
+            <li><kbd>Orders.csv</kbd></li>
+            <li><kbd>Products.csv</kbd></li>
+            <li><kbd>Vendors.csv</kbd></li>
+        </ul>
+        <figure><img alt="Приложение MDB / ACCDB Viewer"
+                     height="565" src="img/mdb_accb_viewer.png" width="1000">
+        </figure>
+        <p>Для работы с файлами <em>MS Access</em> и экспорта данных в другие
+            форматы, в том числе <abbr title="Comma-Separated Values">CVS</abbr>,
+            разработчики консольной утилиты <kbd>jetread</kbd> создали также
+            приложение с графическим интерфейсом <a
+                    href="https://eggerapps.at/mdbviewer/"
+                    target="_blank"
+                    title="Приложение MDB / ACCDB Viewer">MDB /
+                ACCDB Viewer</a>, однако за него придётся заплатить. В этом
+            приложении, когда вы извлекаете данные с помощью команды
+            <kbd>Export CSV</kbd>, надо выбрать переключатель экспорта <kbd>All
+                Tables</kbd>, и тогда вы получите все нужные вам
+            <kbd>.csv</kbd>-файлы сразу.</p>
+        <figure><img alt="Импорт данных из приложения MDB / ACCDB Viewer"
+                     height="565" src="img/mdb_accb_viewer_convert.png"
+                     width="1000"></figure>
+    </section>
+    <section>
+        <h2 id="part04">Шаг 2 (вариант 1). Экспорт данных в СУБД</h2>
+        <p>В принципе, файлы <kbd>.csv</kbd> можно экспортировать в <abbr
+                title="Система управления базами данных">СУБД</abbr>, в
+            частности, в <em>SQLite</em> (началу работы с данной <abbr
+                    title="Система управления базами данных">СУБД</abbr>,
+            кстати,
+            посвящена отдельная <a
+                    href="http://avshcherbina.ru/sqlite3/sqlite.html"
+                    title="Выбор песочницы для изучения SQLite">заметка</a>)
+            и в режиме командной строки, но мы сделаем это при помощи
+            замечательного графического инструмента &mdash; программы <a
+                    href="https://sqlitebrowser.org/"
+                    target="_blank"
+                    title="Программа DB Browser for SQLite">DB Browser for
+                SQLite</a>.</p>
+        <figure><img
+                alt="Создание базы данных в программе DB Browser for SQLite"
+                height="560" src="img/db4s_create.png" width="800"></figure>
+        <p>После установки <em>DB4S</em> запускаем эту программу и командой
+            <kbd>Новая база данных</kbd> создаем файл <abbr
+                    title="база данных">БД</abbr>, например, <kbd>tysql.db</kbd>.
+        </p>
+        <figure><img
+                alt="Отмена редактирования определения таблицы в DB Browser for SQLite"
+                height="670" src="img/db4s_cancel.png" width="700"></figure>
+        <p>Когда появится следующее окно <kbd>Редактирование
+            определения таблицы</kbd>, нажимаем на кнопку <kbd>Отмена</kbd>.</p>
+        <figure><img alt="Импорт данных .cvs в DB Browser for SQLite"
+                     height="585" src="img/db4s_import.png" width="800">
+        </figure>
+        <p>Далее мы по очереди загружаем данные из наших <kbd>.csv</kbd>-файлов
+            командой <kbd>Файл > Импорт > Таблицы из файла CSV...</kbd> При этом
+            не
+            забудьте выбрать опцию <kbd>Имена столбцов в первой строке</kbd>!
+        </p>
+        <figure><img alt="Импортированные таблицы в DB Browser for SQLite"
+                     height="575" src="img/db4s.png" width="1000"></figure>
+        <p>После того, как вы импортировали все 5 файлов <abbr
+                title="Comma-Separated Values">CVS</abbr>, сохраните
+            изменения в <abbr title="База данных">БД</abbr>. Всё, теперь с
+            этой базой можно работать и с помощью команд языка <em>SQL</em>,
+            и в графическом режиме (<em>DB4S</em> позволяет править данные в
+            таблицах).</p>
+    </section>
+    <section>
+        <h2 id="part05">Шаг 2 (вариант 2). Экспорт данных в сторонний офисный
+            пакет</h2>
+        <p>Для работы с <abbr title="База данных">БД</abbr> можно также
+            использовать свободно распространяемый офисный пакет с открытым
+            кодом <em>LibreOffice</em>.</p>
+        <p>Сначала скачайте с <a href="https://ru.libreoffice.org/download/"
+                                 target="_blank"
+                                 title="Загрузка LibreOffice">официального
+            сайта</a> и
+            установите его актуальную версию: саму программу и отдельно пакет
+            для русского языка.</p>
+        <figure><img alt="Программа LibreOffice" height="575"
+                     src="img/libreoffice.png" width="1000"></figure>
+        <p>Запускаем LibreOffice и выбираем компонент Base.</p>
+        <figure><img alt="Импорт данных в LibreOffice (начало)"
+                     height="560" src="img/libreoffice_import_1.png"
+                     width="1000"></figure>
+        <p>Выбираем <kbd>Соединиться с существующей базой данных</kbd> и далее в
+            раскрывающемся списке <kbd>Текст</kbd>, нажимаем на кнопку
+            <kbd>Далее</kbd>.</p>
+        <figure><img alt="Импорт данных в LibreOffice (продолжение)"
+                     height="560" src="img/libreoffice_import_2.png"
+                     width="1000"></figure>
+        <p>Выбираем <kbd>Путь к текстовым файлам</kbd>, указываем папку с
+            распакованными текстовыми файлами (кнопка <kbd>Обзор</kbd>),
+            выбираем желаемый тип файлов &mdash; это <kbd>Разделенные запятой
+                значения (*.cvs)</kbd> и нажимаем кнопку <kbd>Далее</kbd>.</p>
+        <figure><img alt="Импорт данных в LibreOffice (окончание)"
+                     height="560" src="img/libreoffice_import_3.png"
+                     width="1000"></figure>
+        <p>Нажимаем кнопку <kbd>Готово</kbd>.</p>
+        <figure><img alt="Импортированные таблицы в LibreOffice Base"
+                     height="575" src="img/libreoffice_base.png" width="997">
+        </figure>
+        <p>Сохраняем базу данных под нужным именем (по умолчанию используется
+            открытый формат <kbd>.odb</kbd>). Всё, можно работать с базой
+            данных! Запросы можно конструировать в интерактивном режиме, в
+            том числе с помощью специальной программы-мастера, или же писать
+            прямо на языке <em>SQL</em>.</p>
+        <p>При необходимости можно обратиться к справке на русском языке на
+            сайте программы (проще всего это сделать с помощью кнопки
+            <kbd>F1</kbd>
+            (<kbd>fn+F1</kbd>) или меню
+            <kbd>Справка > Справка по LibreOffice</kbd>).</p>
+    </section>
+    <section>
+        <h2 id="part06">А вы знаете, что..?</h2>
+        <figure><img alt="Программа Numbers" height="575" src="img/numbers.png"
+                     width="1000"></figure>
+        <p>Файл <kbd>.csv</kbd> можно открыть в приложении, которое работает с
+            электронными таблицами, например, <em>Numbers</em> для <em>macOS
+            </em>. Но когда мы имеем <em>SQL</em>-подобную <abbr
+                    title="База данных">БД</abbr>, включающую несколько
+            таблиц (а реляционные <abbr
+                    title="Система управления базами данных">СУБД</abbr>
+            состоят больше чем из одной таблицы), импортировать сразу
+            несколько файлов и воссоздать структуру <abbr
+                    title="База данных">БД</abbr> при помощи редактора
+            электронных таблиц у вас, увы, не получится...</p>
+    </section>
+</main>
+<footer>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+    <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
+        Щербина</a>, 04.07.2020
+    </address>
+</footer>
+</body>
+
+</html>

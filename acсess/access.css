@@ -1,0 +1,91 @@
+/* Style: Bluloco Light */
+body {
+    background-color: #f9f9f9;
+    color: #000000;
+    font-family: Georgia,
+        "Times New Roman",
+        serif;
+    font-size: medium;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 2em 1em 1em 1em;
+    text-align: left;
+}
+
+header,
+main,
+footer {
+    padding: 0 0.5em 0 2em;
+}
+
+h1 {
+    color: #2a628b;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+nav {
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
+}
+
+h2 {
+    border-top-style: dashed;
+    color: #3f9172;
+    line-height: 1.3em;
+    padding: 1em 0 0.5em 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.navlinks {
+    color: #2c63e1;
+    font-size: large;
+    line-height: 1.5em;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    color: #2c63e1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover,
+a:focus {
+    color: #d32b55;
+}
+
+kbd,
+code {
+    color: #2a964d;
+    font-family: "Courier New", Courier, mono;
+    font-weight: bold;
+}
+
+.back {
+    font-size: large;
+    font-weight: bold;
+}
+
+address {
+    color: #8248ed;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
