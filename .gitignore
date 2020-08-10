@@ -35,3 +35,4 @@ webstorm/img/.DS_Store
 .prettierrc
 .idea/inspectionProfiles/Project_Default.xml
 .idea/jsLinters/jshint.xml
+.idea/prettier.xml
