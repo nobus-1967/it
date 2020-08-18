@@ -1,0 +1,91 @@
+/* Style: GTK3 Colors */
+body {
+    background-color: #f6f5f4;
+    color: #241f31;
+    font-family: Georgia,
+    "Times New Roman",
+    serif;
+    font-size: medium;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 2em 1em 1em 1em;
+    text-align: left;
+}
+
+header,
+main,
+footer {
+    padding: 0 0.5em 0 2em;
+}
+
+h1 {
+    color: #e66100;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+nav {
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
+}
+
+h2 {
+    border-top-style: dashed;
+    color: #ff7800;
+    line-height: 1.3em;
+    padding: 1em 0 0.5em 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.navlinks {
+    color: #1c71d8;
+    font-size: large;
+    line-height: 1.5em;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    color: #1c71d8;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover,
+a:focus {
+    color: #e01b24;
+}
+
+kbd,
+code {
+    color: #c64600;
+    font-family: "Courier New", Courier, mono;
+    font-weight: bold;
+}
+
+.back {
+    font-size: large;
+    font-weight: bold;
+}
+
+address {
+    color: #1a5fb4;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}

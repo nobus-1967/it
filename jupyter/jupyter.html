@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Использование Jupiter Notebook для создания заметок и
+        руководств</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description"
+          content="Использование Jupiter Notebook для создания заметок и руководств">
+    <meta name="keywords"
+          content="Jupiter, Jupyter Notebook, Python, REPL, заметки, документация, Анатолий Щербина">
+    <link rel="stylesheet" href="jupyther.css">
+</head>
+
+<body>
+<header id="beginning">
+    <h1>Использование Jupiter Notebook для создания заметок и руководств</h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img src="img/jupyter_logo.png" alt="Логотип проекта Jupyter"
+                 height="256"
+                 width="221"></figure>
+    <ul class="navlinks">
+        <li><a href="#part01">Установка и запуск JupiterLab</a></li>
+        <li>
+            <a href="#part02">Ведение заметок c использованием блокнотов Jupiter
+                Notebook</a>
+        </li>
+        <li>
+            <a href="#part03">Работа с файлами CSV</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">Установка и запуск JupiterLab</h2>
+        <figure><img src="img/jupyter.png" alt="Сайт проекта Jupyter"
+                     height="600" width="1000"></figure>
+        <p>Блокнот <em>Jupiter Notebook</em> (сейчас часть интерфейса
+            <em>JupyterLab</em> проекта <a href="https://jupyter.org/"
+                                           title="Сайт проекта Jupyter"
+                                           target="_blank">Jupyter</a>)
+            &mdash; не только популярная среда <abbr title="Read-Eval-Print
+                Loop">REPL</abbr> для написания и запуска кода на
+            <em>Python</em>, но и удобное средство документирования кода.
+            Данный короткий обзор посвящен использованию <em>Jupiter
+                Notebook</em> в качестве инструмента для ведения заметок и
+            написания различных руководств.</p>
+        <p>Можно опробовать работу с блокнотом <em>Jupiter Notebook</em> на
+            сайте проекта, не устанавливая среду на свой компьютер. Если
+            инструмент понравится, установить <em>Jupiter Notebook</em>
+            несложно, когда на вашем компьютере уже имеется <code>python3
+            </code> и пакетный менеджер <code>pip</code>: достаточно
+            выполнить в терминале команду <kbd>pip install jupyterlab</kbd>.
+            Вновь установленная среда запускается также из терминала командой
+            <kbd>jupyter lab</kbd>. Подробности можно посмотреть в
+            <a href="https://jupyterlab.readthedocs.io/en/stable/index.html"
+               title="Документация по JupyterLab (англ.)"
+               target="_blank">документации</a>.
+        </p>
+        <figure><img src="img/notebook_launcher.png"
+                     alt="Запущенная в браузере среда JupyterLab"
+                     height="630" width="1000"></figure>
+        <p>Запустив <em>JupiterLab</em> в браузере, можно работать с
+            блокнотами, содержащими код на языке <em>Python</em>: писать и
+            редактировать код, запускать его и смотреть результаты
+            исполнения. Блокноты можно сохранять, загружать и передавать
+            другим пользователям <em>JupyterLab</em>, а также экспортировать
+            в различные форматы (простой текст <em><abbr
+                    title="American Standard Code for Information Interchange">ASCII</abbr></em>,
+            файлы на языках разметки
+            <em><abbr title="HyperText Markup Language">HTML</abbr></em>,
+            <em>Markdown</em>, а также файлы <em>LaTeX</em> и <em>PDF</em>).</p>
+        <figure><img src="img/notebook_md.png"
+                     alt="Работа с Markdown в JupyterLab"
+                     height="600" width="1000"></figure>
+        <p>Но также возможно напрямую работать с файлами в текстовых форматах
+            (в  частности, <code>.txt</code>, <code>.md</code> и
+            <code>.csv</code>), что и делает данную среду удобным инструментом
+            документирования своей работы. Кстати, для форматированного текста
+            доступен предпросмотр!</p>
+        <figure><img src="img/notebook_md_preview.png"
+                     alt="Предварительный просмотр файла Markdown"
+                     height="600" width="1000"></figure>
+    </section>
+    <section>
+        <h2 id="part02">Ведение заметок c использованием блокнотов Jupiter
+            Notebook</h2>
+        <figure><img src="img/notebook_note_py.png"
+                     alt="Создание заметки в блокноте Jupyter Notebook"
+                     height="600" width="1000"></figure>
+        <p>Блокноты <em>Jupiter Notebook</em> состоят из ячеек: каждая ячейка
+            может содержать либо текст (в том числе текст с разметкой
+            <em>Markdown</em>) или же программный код. Программный код можно
+            запускать, смотреть его вывод, при необходимости в той же ячейке
+            редактировать и запускать заново; только для сброса значения
+            переменных нужно не забывать перезапускать ядро, а
+            также&nbsp;&mdash; при желании&nbsp;&mdash; очищать вывод ранее
+            запущенного кода.</p>
+        <p>Сочетание текста, программного кода и результатов его выполнения и
+            позволяет создавать как короткие заметки, так и более солидную
+            документацию к своим программам. При экспорте, например, в том же
+            файл <em>PDF</em> сохраняется вся подсветка синтаксиса, доступная в
+            блокнотах.</p>
+        <figure><img src="img/pdf_from_notebook.png"
+                     alt="PDF из блокнота Jupyter Notebook" height="940"
+                     width="1000"></figure>
+    </section>
+    <section>
+        <h2 id="part03">Работа с файлами CSV</h2>
+        <figure><img src="img/notebook_note_csv.png"
+                     alt="Создание файла CSV в Jupyter Notebook" height="600"
+                     width="1000"></figure>
+        <p>Еще одна фишка данной среды &mdash; удобная визуализация табличных
+            файлов в формате <em><abbr title="Comma-Separated
+            Values">CSV</abbr></em>. Файлы <code>.csv</code> можно создать с
+            использованием программного кода в прямо в блокноте <em>Jupiter
+                Notebook</em>.</p>
+        <figure><img src="img/notebook_csv.png"
+                     alt="Визуализация содержимого файла CSV" height="600"
+                     width="1000"></figure>
+        <p>Созданный файл доступен в <kbd>File Browser</kbd> слева от окна
+            блокнота. Его можно открыть и посмотреть содержимое, которое
+            отобразится аналогично данным в электронной таблице (<em>но будет
+                доступно только для чтения!</em>).</p>
+        <figure><img src="img/vscode_notebook.png"
+                     alt="<Блокнот Jupyter Notebook в редакторе Visual Studio Code>"
+                     height="600" width="1000"></figure>
+        <p>Итак, кроссплатформенная среда <em>JupyterLab</em> &mdash; это тот
+            инструмент, который пригодится любому программисту. Освоив его,
+            вы сэкономите немало времени и сил для решения своих задач (а
+            также и денег, поскольку эта среда распространяется бесплатно).
+            Кстати, а вы знаете, что блокноты <em>Jupiter Notebook</em> можно не
+                только открывать, но также создавать и работать с ними в
+            популярных редакторах кода, таких, как <em>Visual Studio
+                Code</em>?</p>
+    </section>
+</main>
+<footer>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+    <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
+        Щербина</a>, 18.08.2020
+    </address>
+</footer>
+</body>
+
+</html>
