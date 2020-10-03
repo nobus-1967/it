@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Настройка терминала для работы с REPL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description"
+          content="Настройка терминала для работы с REPL">
+    <meta name="keywords"
+          content="Linux, Ubuntu, Python, IPython, REPL, терминал, Анатолий Щербина">
+    <link rel="stylesheet" href="ipython.css">
+</head>
+
+<body>
+<header id="beginning">
+    <h1>Настройка терминала для работы с <abbr 
+    title="Read-Eval-Print Loop">REPL</abbr></h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img src="img/python.png" alt="Логотип Python в терминале"
+                 height="256"
+                 width="256"></figure>
+    <ul class="navlinks">
+        <li><a href="#part01">Зачем нужны особые настройки для <abbr
+                title="Read-Eval-Print Loop">REPL</abbr>?</a></li>
+        <li>
+            <a href="#part02">Настройка терминала (на примере
+                <em>IPython)</em></a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">Зачем нужны особые настройки для <abbr
+                title="Read-Eval-Print Loop">REPL</abbr>?</h2>
+        <p>В данной заметке я расскажу о том, как можно установить отдельные
+            настройки терминала для работы в интерактивной среде
+            программирования &mdash; <abbr
+                    title="Read-Eval-Print Loop">REPL</abbr>
+            (<em>Read-Eval-Print Loop</em>). Настройка терминала будет
+            рассматриваться на примере <em>Ubuntu Linux</em> (приложение
+            <em>Терминал GNOME</em>).</p>
+        <figure><img src="img/terminal_ipython.png" alt="Терминал GNOME"
+                     height="515" width="870"></figure>
+        <p>В терминале у меня применяется тёмная тема со светлым текстом,
+            подобная той, что я использую при работе в <abbr
+                    title="Integrated Development Environment">IDE</abbr>
+            (таких, как <em>Webstorm</em> и <em>PyCharm</em>, о которых я
+            рассказывал в <a
+                    href="http://avshcherbina.ru/webstorm/webstorm.html"
+                    title="Как я перестал беспокоиться и полюбил JetBrains">отдельной
+                заметке</a>).</p>
+        <figure><img src="img/idle.png" alt="Python3 IDLE"
+                     height="515" width="870"></figure>
+        <p>Однако для работы с интерактивным интерфейсом в консоли бывает
+            удобнее применять светлую тему, как это по умолчанию реализовано в
+            <abbr title="Integrated Development and Learning Environment">
+                IDLE</abbr>
+            &mdash; интегрированной среде разработки и обучения на языке
+            <em>Python</em>. Светлая тема удобна своей <em>подсветкой
+                синтаксиса</em> (выделением синтаксических конструкций языка
+            программирования с использованием различных цветов и/или
+            шрифтовых начертаний). Поэтому мне и потребовался специальный
+            лайвхак, который, не изменяя обычную тему оформления для терминала,
+            устанавливает особый профиль для запуска <abbr
+                    title="Read-Eval-Print Loop">REPL</abbr>.</p>
+    </section>
+    <section>
+        <h2 id="part02">Настройка терминала (на примере <em>IPython)</em></h2>
+        <p>Итак, создадим светлую тему оформления для запуска <a
+                href="https://ipython.readthedocs.io/"
+                title="Документация по IPython">IPython</a>. <em>IPython</em>
+            &mdash; усовершенствованная оболочка для работы с языком
+            <em>Python</em>, которая, в отличие от стандартной версии <abbr
+                    title="Read-Eval-Print Loop">REPL</abbr>, имеет удобные
+            для работы дополнения, в том числе и необходимую мне подсветку
+            синтаксиса (поэтому, собственно говоря, и потребовалась светлая
+            тема). Именно на базе <em>IPython</em> построено мощное средство
+            разработки &mdash; <em>JupiterLab</em> (о работе с ним можно
+            почитать в <a href="http://avshcherbina.ru/jupyter/jupyter.html"
+                          title="Использование Jupyter Notebook для создания заметок и руководств">отдельной
+                заметке</a>).</p>
+        <figure><img src="img/profile_new.png"
+                     alt="Создание нового профиля в Терминале GNOME"
+                     height="500" width="800"></figure>
+        <p>Для начала откроем в <em>Терминале GNOME</em> меню
+            <kbd>Параметры</kbd> (удобно выбрать его в контекстном меню, щелкнув
+            по окну терминала правой клавишей мыши). Создадим новый профиль,
+            щелкнув на знаке <kbd>+</kbd> слева, и дадим ему имя: например,
+            <kbd>ipython</kbd>.</p>
+        <figure><img src="img/profile_1.png"
+                     alt="Настройка вкладки Текст в Терминале GNOME"
+                     height="500" width="800"></figure>
+        <p>Во вкладке <kbd>Текст</kbd> можно задать размеры вновь открываемого
+            терминала. У меня установлены размеры 80 символов в строке на 42
+            строки (хотя на иллюстрациях для удобства отображения выбран размер
+            80x20). Также я меняю форму курсора со стандартной (<kbd>Блок</kbd>)
+            на <kbd>Подчеркивание</kbd>.</p>
+        <figure><img src="img/profile_2.png"
+                     alt="Настройка вкладки Цвета в Терминале GNOME"
+                     height="500" width="800"></figure>
+        <p>Во вкладке <kbd>Цвета</kbd> я устанавливаю встроенную цветовую
+            схему <kbd>Чёрный на белом</kbd> (можно подобрать другие схемы в
+            светлых тонах, какие вам нравятся больше и, главное, гармонируют
+            с подсветкой синтаксиса в применяемой <abbr
+                    title="Read-Eval-Print Loop">REPL</abbr>). Собственно, ради
+            этого действия мы и создаём новый профиль.</p>
+        <figure><img src="img/profile_3.png"
+                     alt="Настройка вкладки Команда в Терминале GNOME"
+                     height="500" width="800"></figure>
+        <p>Также во вкладке <kbd>Команда</kbd> я отмечаю опцию <kbd>Запускать
+            другую команду вместо моей оболочки</kbd> и вписываю команду
+            <kbd>ipython</kbd>. Теперь вместо <em>bash</em> в данном профиле
+            будет запускаться интерактивный интерпретатор <em>IPython</em>.</p>
+        <figure><img src="img/terminal_new_window.png"
+                     alt="Открытие нового окна Терминала GNOME с новым профилем"
+                     height="515" width="870"></figure>
+        <p>Можно закрыть окно параметров и перезапустить терминал. Теперь,
+            щелкнув на треугольнике &dtrif; рядом с кнопкой открытия новой
+            вкладки терминала (вверху слева под строкой заголовка
+            <kbd>Терминала GNOME</kbd>), мы выбираем только что созданный
+            профиль <kbd>ipython</kbd>. Открывается новое окно терминала с <abbr
+                    title="Read-Eval-Print Loop">REPL</abbr>):</p>
+        <figure><img src="img/terminal_ipython.png"
+                     alt="Терминал GNOME с IPython"
+                     height="515" width="870"></figure>
+        <p>Таким же образом можно настроить <abbr
+                title="Read-Eval-Print Loop">REPL</abbr> и для других языков
+            программирования. В частности, у меня в отдельном окне терминала со
+            светлой схемой оформления запускается <a href="https://nodejs.org/"
+                                                     title="Сайт Node.js">Node.js</a>.
+        </p>
+    </section>
+</main>
+<footer>
+    <p><a href="#beginning" title="Вверх, к началу страницы">&uarr;&nbsp;К
+        началу страницы</a></p>
+    <address>&copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">Анатолий
+        Щербина</a>, 03.10.2020
+    </address>
+</footer>
+</body>
+
+</html>

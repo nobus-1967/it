@@ -1,8 +1,10 @@
-/* Style: Base16 */
+/* Style: REPL (based on GTK3 Colors) */
 body {
-    background-color: #f5f5f5;
-    color: #202020;
-    font-family: Georgia, "Times New Roman", serif;
+    background-color: #eeeeec;
+    color: #2e2436;
+    font-family: Georgia,
+    "Times New Roman",
+    serif;
     font-size: medium;
     line-height: 1.2em;
     margin: 0;
@@ -17,7 +19,7 @@ footer {
 }
 
 h1 {
-    color: #151515;
+    color: #5c3566;
     line-height: 1.5em;
     text-align: center;
 }
@@ -33,7 +35,7 @@ nav {
 
 h2 {
     border-top-style: dashed;
-    color: #6a9fb5;
+    color: #4e9a06;
     line-height: 1.3em;
     padding: 1em 0 0.5em 0;
 }
@@ -43,7 +45,7 @@ ul {
 }
 
 .navlinks {
-    color: #ac4142;
+    color: #204a87;
     font-size: large;
     line-height: 1.5em;
 }
@@ -58,7 +60,7 @@ img {
 
 a:link,
 a:visited {
-    color: #ac4142;
+    color: #204a87;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -66,20 +68,14 @@ a:visited {
 a:active,
 a:hover,
 a:focus {
-    color: #aa759f;
+    color: #cc0000;
 }
 
 kbd,
-code,
-var {
-    color: #8f5536;
+code {
+    color: #ce5c00;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
-}
-
-.jscode {
-    background-color: #e0e0e0;
-    padding: 1em 1em 1em 3em;
 }
 
 .back {
@@ -88,7 +84,7 @@ var {
 }
 
 address {
-    color: #8f5536;
+    color: #3465a4;
     font-size: large;
     font-weight: bold;
     text-align: center;

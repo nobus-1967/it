@@ -2,9 +2,7 @@
 body {
     background-color: #f6f5f4;
     color: #241f31;
-    font-family: Georgia,
-    "Times New Roman",
-    serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: medium;
     line-height: 1.2em;
     margin: 0;
@@ -74,7 +72,7 @@ a:focus {
 kbd,
 code {
     color: #c64600;
-    font-family: "Courier New", Courier, mono;
+    font-family: "Courier New", Courier, monospace;
     font-weight: bold;
 }
 
