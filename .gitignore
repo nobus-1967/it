@@ -40,3 +40,4 @@ webstorm/img/.DS_Store
 .idea/inspectionProfiles/Project_Default.xml
 .idea/jsLinters/jshint.xml
 .idea/prettier.xml
+.idea/dbnavigator.xml
