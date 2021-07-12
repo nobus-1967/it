@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Определение частотности элементов в Python 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Анатолий Щербина">
+    <meta name="description"
+          content="Использование различных способов определения частотности элементов в Python 3">
+    <meta name="keywords"
+          content="Python, программирование, частотность, list, dict, .count, collections, defaultdict, Counter, Анатолий Щербина">
+    <link rel="stylesheet" href="frequency.css">
+</head>
+
+<body>
+<header id="beginning">
+    <h1>Определение частотности элементов в <em>Python&nbsp;3</em></h1>
+</header>
+<nav>
+    <p class="itpage"><a href="/index.html"
+                         title="К списку заметок компьютерной тематики">&rarr;&nbsp;За
+        компьютером</a></p>
+    <figure><img src="img/frequency.png" alt="Частотность элементов"
+                 height="256" width="256"></figure>
+    <ul class="navlinks">
+        <li>
+            <a href="#part01">
+                Определение частотности элементов при помощи <em>Python</em>
+            </a>
+        </li>
+        <li>
+            <a href="#part02">
+                Логика программы анализа частотности
+            </a>
+        </li>
+        <li>
+            <a href="#part03">
+                Очистка текста и преобразование его в список букв
+            </a>
+        </li>
+        <li>
+            <a href="#part04">
+                Вывод итоговой статистики
+            </a>
+        </li>
+        <li>
+            <a href="#part05">
+                Анализ частотности <em>методом грубой силы</em>
+            </a>
+        </li>
+        <li>
+            <a href="#part06">
+                <em>Питонический</em> способ подсчёта частотности
+            </a>
+        </li>
+        <li>
+            <a href="#part07">
+                Используем метод <code>.count()</code>
+            </a>
+        </li>
+        <li>
+            <a href="#part08">
+                Определяем частотность при помощи <code>defaultdict</code>
+            </a>
+        </li>
+        <li>
+            <a href="#part09">
+                <code>Counter</code> &mdash; универсальный счётчик
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section>
+        <h2 id="part01">
+            Определение частотности элементов при помощи <em>Python</em>
+        </h2>
+        <p>Одна из распространённых задач для программистов &mdash; определение
+            частотности каких-либо элементов. В настоящей заметке мы посмотрим,
+            как можно решить эту задачу средствами <em>Python&nbsp;3</em>.</p>
+        <p>Определим для себя, что мы будем анализировать частнотность букв
+            английского алфавита (без учёта знаков препинания и пробелов) в
+            каком-либо англоязычном тексте. Следовательно, наше техническое
+            задание будет включать некоторую <strong>подготовительную
+                работу</strong> (очистка текста и подготовка его к анализу),
+            собственно <strong>подсчет частотности</strong> и
+            <strong>заключительную часть</strong> (вывод информации в
+            удобочитаемом для пользователя виде).</p>
+        <p>Таким образом, наша программа может состоять из нескольких
+            частей, выполняющих следующую работу:</p>
+        <ol>
+            <li>
+                Получение текста от пользователя.
+            </li>
+            <li>
+                Очистка текста (вынесем её в отдельную функцию).
+            </li>
+            <li>
+                Анализ частотности различными способами.
+            </li>
+            <li>
+                Вывод информации о частоте встречаемости тех или иных букв
+                английского алфавита (также можно реализовать в виде отдельной
+                функции).
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h2 id="part02">
+            Логика программы анализа частотности
+        </h2>
+        <p>Весь алгоритм программы можно поместить в функцию
+            <code>main()</code>:</p>
+        <figure>
+            <img src="img/main.png" alt="Скриншот функции main()"
+                 height="402" width="1000">
+        </figure>
+        <p>Для начала нам вполне достаточно такого кода основной функции.</p>
+        <p>Понятно, чем является переменная <code>text</code>: это неизменяемый
+            объект класса <code>str</code>. А вот как будет выглядеть
+            переменная <code>letters</code>? Логичнее всего представить её в
+            виде списка букв английского алфавита, причём в том порядке и
+            количестве, в каком эти буквы будут расположены в оригинальном
+            тексте. Таким образом, строка <kbd>'Hello, World 2021!'</kbd>
+            станет у нас списком
+            <code>['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']</code>.
+            Легко заметить, что буква <code>l</code> попадается в списке 3 раза,
+            буква <code>o</code> &mdash; 2 раза, а остальные буквы
+            (<code>h</code>, <code>e</code>, <code>w</code>, <code>r</code> и
+            <code>d</code>) &mdash; только по одному разу каждая. Такую вот
+            статистику и будет собирать наша программа.</p>
+        <p>А вы заметили, что в списке приведены только строчные английские
+            буквы? Нам не важен регистр букв в исходном тексте; поэтому
+            заглавные (прописные) буквы на этапе очистки текста будут
+            преобразованы в строчные.</p>
+    </section>
+    <section>
+        <h2 id="part03">
+            Очистка текста и преобразование его в список букв
+        </h2>
+        <p>Итак, текст приходит к нам в необработанном виде и подвергается
+            очистке от знаков препинания. На этапе очистки мы также преобразуем
+            все заглавные буквы в строчные, т.е. приведём весь текст к нижнему
+            регистру.</p>
+        <p>Можно, конечно, создать список всех возможных знаков препинания, но
+            проще всего воспользоваться готовым решением &mdash; константой
+            <code>punctuation</code>, которые содержатся в стандартном модуле
+            <code>string</code>:</p>
+        <figure>
+            <img src="img/punctuation.png" alt="Скриншот string.punctuation"
+                 height="280" width="1000">
+        </figure>
+        <p>и получаем <code>!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~</code>.</p>
+        <p>Кстати, в тексте могут попадаться и цифры &mdash; их мы тоже не
+            будем считать. Для удаления знаков пунктуации и цифр воспользуемся
+            регулярными выражениями, предоставляемыми модулем <code>re</code> из
+            стандартной библиотеки.</p>
+        <p>Теперь можно написать последовательность команд для очистки текста.
+            Мы приводим текст к нижнему регистру, удаляем знаки пунктуации и
+            цифры, затем разбиваем текст на слова (простейший способ убрать
+            пробелы), соединяем слова и делаем из очищенного текста список
+            букв:</p>
+        <figure>
+            <img src="img/cleartext.png" alt="Скриншот кода очистки текста"
+                 height="622" width="1000">
+        </figure>
+        <p>Запустив данный код с тестовой строкой и добавив команды вывода после 
+            каждой операции очистки, мы увидим следующее:</p>
+        <code>
+            text: Hello, World 2021!<br>
+            hello, world<br>
+            ['hello,', 'world']<br>
+            letters: ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']
+        </code>
+        <p>Всё работает! Давайте упростим код и посетим его в функцию
+            <code>clear_text()</code>:</p>
+        <figure>
+            <img src="img/def_cleartext.png" alt="Скриншот функции clear_text()"
+                 height="646" width="1000">
+        </figure>
+    </section>
+    <section>
+        <h2 id="part04">
+            Вывод итоговой статистики
+        </h2>
+        <p>Прежде чем перейти собственно к коду, анализирующему статистику
+            использования букв в тексте, давайте подумаем, а в каком виде мы
+            должны получить эту  информацию? И здесь сразу напрашивается такая
+            структура данных, как <em>словарь</em>. Буквы станут у нас
+            уникальными ключами, а счётчики их использований &mdash; значениями
+            словаря, например для фразы <kbd>'Hello, World 2021!'</kbd> словарь
+            будет выглядеть так:</p>
+        <code>{'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}</code>
+        <p>Отлично, а теперь давайте напишем код, который будет печатать
+            словарь в удобном для восприятия виде. Для этого воспользуемся
+            методом <code>.items()</code>, который возвращает ключи и связанные
+            с ними значения, примерно так (сразу оформим код в функцию):</p>
+        <figure><img src="img/def_printresults.png"
+                     alt="Скриншот функции print_results()" height="280"
+                     width="1000">
+        </figure>
+        <p></p>
+    </section>
+    <section>
+        <h2 id="part05">
+            Анализ частотности <em>методом грубой силы</em>
+        </h2>
+        <p>Вот теперь пришло время заняться ядром нашей программы &mdash; кодом,
+            который и будет вести статистику использования букв в
+            англоязычном тексте. Данную задачу можно решить многими способами,
+            но для начала попробуем применить <em>метод грубой силы</em>, т.е.
+            самый простой (примитивный) способ. Начнём перебирать словарь букв,
+            каждую букву будем добавлять в новый словарь в виде ключа (если её
+            там нет, присвоим её счётчику значение <kbd>1</kbd>; если есть
+            &mdash; увеличим уже имеющееся значение на <kbd>1</kbd>):</p>
+        <figure><img src="img/bruteforce.png"
+                     alt="Скриншот кода метода грубой силы" height="402"
+                     width="1000">
+        </figure>
+        <p>Если мы запустим список букв фразы <kbd>'Hello, World 2021!'</kbd> и
+            включим тестовый вывод, то увидим, как фомируется наш словарь:</p>
+        <code>{'h': 1}<br>
+            {'h': 1, 'e': 1}<br>
+            {'h': 1, 'e': 1, 'l': 1}<br>
+            {'h': 1, 'e': 1, 'l': 2}<br>
+            {'h': 1, 'e': 1, 'l': 2, 'o': 1}<br>
+            {'h': 1, 'e': 1, 'l': 2, 'o': 1, 'w': 1}<br>
+            {'h': 1, 'e': 1, 'l': 2, 'o': 2, 'w': 1}<br>
+            {'h': 1, 'e': 1, 'l': 2, 'o': 2, 'w': 1, 'r': 1}<br>
+            {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1}<br>
+            {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}<br></code>
+        <p>Всё работает, соберём программу и проведём некоторый её рефакторинг
+            для лучшего отображения данных:</p>
+        <figure><img src="img/main_bruteforce.png"
+                     alt="Скриншот программы с методом грубой силы"
+                     height="1344" width="1000">
+        </figure>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)</code>
+        <p>Файл с кодом данной версии программы:
+            <a href="py/bruteforce.py" title="Программа bruteforce.py"
+               target="_blank">bruteforce.py</a>.</p>
+    </section>
+    <section>
+        <h2 id="part06">
+            <em>Питонический</em> способ подсчёта частотности
+        </h2>
+        <p>Мы решили задачу <em>методом грубой силы</em>, но существуют более
+            изящные (<em>питонические</em>) варианты, и вот &mdash; самый
+            известный из них:</p>
+        <figure><img src="img/pythonic.png" alt="Скриншот питонического кода"
+                     height="328" width="1000">
+        </figure>
+        <p>Как работает этот код: если ключа нет в словаре (т.е. буква ещё не
+            добавлена в новый словарь), метод <code>.get()</code> возвращает
+            значение, опредённое пользователем (как будто у нас уже было
+            значение <kbd>0</kbd>) и увеличивает его на единицу; если же ключ
+            есть &mdash; просто увеличивает существующее значение.</p>
+        <p>Полный текст программы с данным вариантом кода:</p>
+        <figure><img src="img/main_pythonic.png"
+                     alt="Скриншот программы с питоническим методом"
+                     height="1270" width="1000">
+        </figure>
+        <p>Выход программы идентичен:</p>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)</code>
+        <p>Файл с кодом данной версии программы:
+            <a href="py/pythonic.py" title="Программа pythonic.py"
+               target="_blank">pythonic.py</a>.</p>
+        <p>В принципе, на этом варианте можно было бы остановиться, вспомнив
+            принцип из <em>&quot;Дзен Python&quot;</em>, что должен
+            существовать один (и желательно только один) способ решить
+            какую-либо задачу. Но, раз мы не голландцы, в отличие от создателя
+            языка <em>Гвидо ван Россума</em>, то далее рассмотрим ещё несколько
+            не менее эффектных вариантов.</p>
+    </section>
+    <section>
+        <h2 id="part07">
+            Используем метод <code>.count()</code>
+        </h2>
+        <p>Метод <code>.count()</code> проводит поиск значения по списку и
+            возвращает количество вхождений значения в список. Воспользовавшись
+            воззможностями генерирования словарей, получим нужный нам словарь
+            &quot;на лету&quot;:</p>
+        <figure><img src="img/count.png"
+                     alt="Скриншот использования .count()" height="254"
+                     width="1000">
+        </figure>
+        <p>Очень изящно, не так ли? Соберём новый вариант программы:</p>
+        <figure><img src="img/main_count.png"
+                     alt="Скриншот программы с методом .count()" height="1196"
+                     width="1000">
+        </figure>
+        <p>Выход программы также идентичен:</p>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)</code>
+        <p>Файл с кодом данной версии программы:
+            <a href="py/count.py" title="Программа count.py"
+               target="_blank">count.py</a>.</p>
+    </section>
+    <section>
+        <h2 id="part08">
+            Определяем частотность при помощи <code>defaultdict</code>
+        </h2>
+        <p>Есть обычные словари, а есть <code>defaultdict</code> из модуля
+            <code>collections</code>. Обычный словарь, если обратиться к
+            несуществующему ключу, инициирует исключение <kbd>KeyError</kbd>;
+            напротив, <code>defaultdict</code> создаст недостающий элемент.
+            Элементы нового словаря по умолчанию создаются с помощью
+            <code>int()</code>, возвращающего целочисленный объект
+            <kbd>0</kbd>:</p>
+        <figure><img src="img/defaultdict.png"
+                     alt="Скриншот кода с collections.defaultdict" height="402"
+                     width="1000">
+        </figure>
+        <p>Похоже на приведённый выше питонический способ, но с использованием
+            встроенных батареек! И теперь наша программа выглядит так:</p>
+        <figure><img src="img/main_defaultdict.png"
+                     alt="Скриншот программы с collections.defaultdict"
+                     height="1294" width="1000">
+        </figure>
+        <p>Всё тот же вывод программы:</p>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)</code>
+        <p>Файл с кодом данной версии программы:
+            <a href="py/defaultdict.py" title="Программа pydefaultdict.py"
+               target="_blank">defaultdict.py</a>.</p>
+    </section>
+    <section>
+        <h2 id="part09">
+            <code>Counter</code> &mdash; универсальный счётчик
+        </h2>
+        <p>Наконец, последний из рассмотренных нами способов использует другие
+            батарейки (на этот раз не обычные, а алкалиновые) &mdash;
+            <code>Counter</code> из того же модуля <code>collections</code>. Это
+            самое простое в использовании решение, поскольку
+            <code>Counter</code> сделает за вас всю работу:</p>
+        <figure><img src="img/counter.png"
+                     alt="Скриншот кода с collections.Counter" height="328"
+                     width="1000">
+        </figure>
+        <p>Теперь наша программа стала такой:</p>
+        <figure><img src="img/main_counter.png"
+                     alt="Скриншот программы с collections.Counter"
+                     height="1220" width="1000">
+        </figure>
+        <p>Вывод программы:</p>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)</code>
+        <p>Файл с кодом данной версии программы:
+            <a href="py/counter.py" title="Программа counter.py"
+               target="_blank">counter.py</a>.</p>
+        <p>Но <code>Сounter</code> вообще многое умеет делать. Например, он
+            работает со строками (и мы могли бы не разбивать строку на отдельные
+            буквы, а скормить её данному счётчику целиком); проводить
+            арифметические операции с элементами; складывать, вычитать,
+            объединять различные счётчики; показывать наиболее встречаемые
+            элементы с помощью  метода <code>.most_common([n])</code>, где
+            <kbd>n</kbd> &mdash; количество топовых элементов. Например, если мы
+            ходим вывести две самых встречаемых буквы:</p>
+        <figure><img src="img/mostcommon.png"
+                     alt="Скриншот вывода Counter с методом .most_common()"
+                     height="280" width="1000">
+        </figure>
+        <p>Добавим такой вывод в нашу программу:</p>
+        <figure><img src="img/main_counter_mostcommon.png"
+                     alt="Скриншот программы с collections.Counter.most_common()"
+                     height="1468" width="1000">
+        </figure>
+        <p>Вывод программы следующий:</p>
+        <code>Enter a text to analyze: Hello, World 2021!<br>
+            Frequence of used letters:<br>
+            h:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            e:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)<br>
+            w:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            r:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            d:&nbsp;&nbsp;&nbsp;1 time(s)<br>
+            Two most common letters:<br>
+            l:&nbsp;&nbsp;&nbsp;3 time(s)<br>
+            o:&nbsp;&nbsp;&nbsp;2 time(s)</code>
+        <p>Файл с кодом усовершенствованной версии программы:
+            <a href="py/counter_mostcommon.py"
+               title="Программа counter_mostcommon.py"
+               target="_blank">counter_mostcommon.py</a>.</p>
+        <p>Вот и всё, что я хотел рассказать вам о способах подсчёта
+            частотности.</p>
+    </section>
+</main>
+<footer>
+    <p>
+        <a href="#beginning" title="Вверх, к началу страницы">
+        &uarr;&nbsp;К началу страницы
+        </a>
+    </p>
+    <address>
+        &copy;&nbsp;<a href="/index.html" title="Сайт Анатолия Щербины">
+        Анатолий Щербина</a>, 12.07.2021
+    </address>
+</footer>
+</body>
+
+</html>
