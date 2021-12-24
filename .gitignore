@@ -45,3 +45,4 @@ webstorm/img/.DS_Store
 .idea/prettier.xml
 .idea/dbnavigator.xml
 
+.idea/markdown.xml
