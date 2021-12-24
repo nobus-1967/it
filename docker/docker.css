@@ -1,0 +1,102 @@
+/* Style: Blue in Colors */
+body {
+    background-color: #e8f8fc;
+    color: #001e2e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: medium;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 2em 1em 1em 1em;
+    text-align: left;
+}
+
+header,
+main,
+footer {
+    padding: 0 0.5em 0 2em;
+}
+
+h1 {
+    color: #199eb8;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+nav {
+    padding: 1em 0.5em 0.5em 2em;
+}
+
+.itpage {
+    padding: 0 2em 0.5em 2em;
+    text-align: right;
+}
+
+h2 {
+    border-top-style: dashed;
+    color: #0077b6;
+    line-height: 1.3em;
+    padding: 1em 0 0.5em 0;
+}
+
+h3 {
+    color: #00596b;
+    font-size: medium;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.navlinks {
+    color: #003c5c;
+    font-size: large;
+    line-height: 1.5em;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    padding: 0;
+}
+
+a:link,
+a:visited {
+    color: #003c5c;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active,
+a:hover,
+a:focus {
+    color: #c60000;
+}
+
+kbd,
+code {
+    color: #0f5462;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+.pycode {
+    background-color: #e0e0e0;
+    padding: 1em 1em 1em 3em;
+}
+
+.back {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+address {
+    color: #007095;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
