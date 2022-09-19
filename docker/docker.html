@@ -397,9 +397,10 @@
                     title="Модифицированный образ Postgres с русской локалью"
                     target="_blank">модифицированным образом</a> &mdash; в нем
             сразу установлена поддержка русской локали.</p>
-        <p>Итак, давайте загрузим пересобранный образ <em>PostgeSQL</em> версии
-            14.1 на свой компьютер:</p>
-        <code>docker pull nobus1967/postgres:postgres14.1-ru</code>
+        <p>Итак, давайте загрузим пересобранный образ <em>PostgeSQL</em>
+            последней версии (14-й на момент редактирования заметки в 2022 году)
+            на свой компьютер:</p>
+        <code>docker pull nobus1967/postgres:latest-ru</code>
         <p>Проверим наличие образа и посмотрим его <kbd>IMAGE ID</kbd>: все в
             порядке.</p>
         <p>Далее создадим контейнер, с которым мы и будем работать. В принципе,
@@ -438,8 +439,8 @@
         <p>Также мы выполним команду первоначальной активации контейнера
             <code>docker run</code> с ключом <code>-d</code>, что позволит
             запустить его в фоновом режиме. Итак, поехали:</p>
-        <code>docker run -d -p 5433:5432 --name postgres14.1 -e
-            POSTGRES_PASSWORD=4FKU8zkW nobus1967/postgres:postgres14.1-ru</code>
+        <code>docker run -d -p 5433:5432 --name postgres -e
+            POSTGRES_PASSWORD=4FKU8zkW nobus1967/postgres:latest-ru</code>
         <p>Проверим наличие запущенного контейнера и увидим, что он подключен к
             нужному порту: порту <kbd>5432</kbd> в контейнере и порту
             <kbd>5433</kbd> в <abbr title="Операционная система">ОС</abbr>.
@@ -449,6 +450,14 @@
                  alt="Первоначальный запуск контейнера с Postgres"
                  height="408" width="1000">
         </figure>
+        <h3>UPDATE (19.09.2022):</h3>
+        <p>Внесены исправления для использования последней версии
+            <em>PostgreSQL</em> из
+            <a href="https://hub.docker.com/repository/docker/nobus1967/postgres"
+               title="Репозиторий с русифицированными образами PostgeSQL"
+               target="_blank">репозитория</a> (последняя версия обозначения
+            тегом <code>latest-ru</code>; на скриншотах осталась первоначальная
+            версия).</p>
     </section>
     <section>
         <h2 id="part04">
@@ -459,7 +468,7 @@
             выполнить несколько команд в стандартном интерактивном терминале
             <abbr title="Система управления базами данных">СУБД</abbr>.</p>
         <p>Запустим контейнер в интерактивном режиме:</p>
-        <code>docker start -i postgres14.1</code>
+        <code>docker start -i postgres</code>
         <figure>
             <img src="img/postgres_3.png"
                  alt="Запуск контейнера с Postgres в интерактивном режиме"
@@ -471,10 +480,10 @@
             контейнер (воспользуемся в терминале комбинацией клавиш
             <kbd>CTRL+C</kbd>) и заново стартуем контейнер в стандартном
             режиме, а потом подключимся к нему командой <code>docker exec</code>
-            c ключом <code>-it postgres14.1 bash</code> (т.&nbsp;е. в
+            c ключом <code>-it postgres bash</code> (т.&nbsp;е. в
             интерактивном режиме с запущенной командной оболочкой
             <em>bash</em>):</p>
-        <code>docker exec -it postgres14.1 bash</code>
+        <code>docker exec -it postgres bash</code>
         <figure>
             <img src="img/postgres_4.png"
                  alt="Запуск контейнера с Postgres в интерактивном режиме"
@@ -506,12 +515,6 @@
             пользователя <kbd>postgres</kbd> и из <em>bash</em> двумя командами
             <code>exit</code> (вторая команда не остановит наш контейнер,
             сделаем это вручную командой <code>docker stop</code>).</p>
-        <h3>UPDATE:</h3>
-        <p>Рекомендуется проверить наличие более свежих образов
-            <em>PostgreSQL</em> в
-            <a href="https://hub.docker.com/repository/docker/nobus1967/postgres"
-               title="Репозиторий с русифицированными образами PostgeSQL"
-               target="_blank">данном репозитории</a>.</p>
     </section>
     <section>
         <h2 id="part05">
