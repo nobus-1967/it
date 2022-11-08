@@ -222,16 +222,28 @@
             <a href="https://www.unicode.org/charts/PDF/U0000.pdf"
                title="Unicode C0 Controls and Basic Latin"
                target="_blank"><em>ASCII</em></a>, в том числе и буквы
-            кириллицы. Для работы с символами, отличными от базовой латиницы,
-            необходимо либо самостоятельно собрать из предлагаемого
+            кириллицы. </p>
+        <h3>Обновлено (c версии 1.1.9):</h3>
+        <p>Для работы с символами, отличными от базовой латиницы,
+            можно либо самостоятельно собрать из предлагаемого
             разработчиками <em>SQLite</em> кода библиотеку для интеграции
             компонентов <em>Unicode</em>
-            (<abbr title="International Components for Unicode"><em>ICU</em></abbr>),
-            либо воспользоваться готовым расширением. В нашем проекте реализован
-            второй путь &mdash; подключение готового расширения
+            (<abbr
+                    title="International Components for Unicode"><em>ICU</em>
+            </abbr>),
+            либо воспользоваться готовым расширением, например
             <a href="https://pypi.org/project/sqlite-icu/"
                title="Loadable ICU extension for sqlite"
                target="_blank"><code>sqlite-icu</code></a>.</p>
+        <p>Ранее в проекте использовался упомянутый подключаемый модуль
+            <code>sqlite-icu</code>, но в версии 1.1.9 эта зависимость исключена
+            в пользу строкового метода  <code>.casefold()</code>, который
+            применяется в определяемой <em>SQL</em>-функции
+            <code>connection.create_function()</code>. Данный метод
+            корректно &laquo;сворачивает&raquo; юникодовскую строку в нижний
+            регистр, благодаря чему возможно сравнивать приведенные к
+            нижнему регистру строку пользовательского запроса и строку,
+            извлечённую из базы данных.</p>
     </section>
     <section>
         <h2 id="part04">
