@@ -46,3 +46,4 @@ webstorm/img/.DS_Store
 .idea/dbnavigator.xml
 
 .idea/markdown.xml
+.htaccess
